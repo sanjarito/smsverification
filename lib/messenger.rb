@@ -10,12 +10,12 @@ module Messenger
 
     from = '+18446946384'
 
-  
+
 
     message = @client.account.messages.create(
         :from => from,
         :to => '+1'+number,
-        :body => 'Work Hard. Do Good. Change the World. Ya hice una aplication que hace mensajes, mira metete a: https://lit-badlands-63534.herokuapp.com/apps/texty pon el telefono de mariana y dile que vamos a yoga'
+        :body =>  ' Your verification code is = ' @phone_id
         )
   end
 
