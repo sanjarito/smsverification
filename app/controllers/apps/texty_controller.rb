@@ -9,8 +9,9 @@ class Apps::TextyController < ApplicationController
     @phone.send_sms(@phone.clean_number)
     @phone.save
     if @phone.save
-      flash[:success] = "Thanks! Your code is on the way please verify!"
+
       redirect_to '/welcome'
+      flash[:success] = "Thanks! Your code is on the way please verify!"
     else
       render 'new'
     end

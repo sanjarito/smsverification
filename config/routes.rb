@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   root 'apps/texty#index'
 
-  get 'welcome#index'
+  get 'welcome' => 'welcome#index'
 
   namespace :apps do
     resources :texty, :only => [:index]
