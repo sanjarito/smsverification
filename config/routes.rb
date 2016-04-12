@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :texty, :only => [:index]
 
   post '/texty/send_text' => 'texty#send_text'
+  get 'texty/verify'  => 'texty#verify'
   end
 
 
