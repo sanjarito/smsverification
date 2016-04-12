@@ -8,9 +8,6 @@ class Phone < ActiveRecord::Base
     number unless number.length != 10
   end
 
-  def randomgenerator
-    id =  self.id + "1234"
 
-  end
 
 end
