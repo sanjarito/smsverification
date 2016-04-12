@@ -15,7 +15,7 @@ module Messenger
     message = @client.account.messages.create(
         :from => from,
         :to => '+1'+number,
-        :body =>  ' Your verification code is = ' @phone_id
+        :body =>  ' Your verification code is = ' 
         )
   end
 
