@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   namespace :apps do
     resources :texty, :only => [:index]
 
-  post 'apps/texty/send_text' => 'texty#send_text'
+  post '/texty/send_text' => 'texty#send_text'
   end
 
 
