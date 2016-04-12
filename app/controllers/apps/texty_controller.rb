@@ -11,7 +11,7 @@ class Apps::TextyController < ApplicationController
     if @phone.save
 
       redirect_to '/welcome'
-      flash[:success] = "Thanks! Your code is on the way please verify!"
+      
     else
       render 'new'
     end
