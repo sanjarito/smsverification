@@ -9,7 +9,7 @@ module Messenger
 
 
 
-    @client = Twilio::REST::Client.new acct_sid, auth_token varx
+    @client = Twilio::REST::Client.new acct_sid, auth_token, varx
 
     from = '+18446946384'
 
