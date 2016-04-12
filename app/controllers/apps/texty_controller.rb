@@ -8,12 +8,12 @@ class Apps::TextyController < ApplicationController
 
   def send_text
     @phone = Phone.new(phone_params)
-    @phone.send_sms(@phone.clean_number)
+    @phone.send_sms(@phone.clean_number, @phone.randomgenerator)
     @phone.save
     if @phone.save
 
       redirect_to '/welcome'
-      
+
 
     else
       render 'new'
@@ -23,7 +23,7 @@ class Apps::TextyController < ApplicationController
   private
 
   def phone_params
-    params.require(:phone).permit(:number)
+    params.require(:phone).permit(:number :id)
   end
 
 end
