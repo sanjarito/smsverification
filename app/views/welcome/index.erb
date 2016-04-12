@@ -2,6 +2,15 @@
   <div class="container">
  <h1> Thanks! Your code is on the way please enter verification number.</h1>
 
- 
+
   </div>
+
+  <div class="container" id="app-texty-form">
+    <%= form_for @phone, url: '/apps/texty/send_text' do |f| %>
+    <%= f.label :number, 'Enter Your Phone Number' %>
+    <%= f.telephone_field :number, class: 'form-control', placeholder: '###-###-####' %><br>
+    <%= f.submit 'Send Text', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+  
 </div>
