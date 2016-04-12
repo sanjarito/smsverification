@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root '/texty/send_text'
+  root 'texty#index'
     get '/about' => 'welcome#about'
 
   namespace :apps do
