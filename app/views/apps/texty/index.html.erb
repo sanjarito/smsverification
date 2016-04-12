@@ -1,7 +1,13 @@
 <div class="container">
   <div class="container" id="app-texty-title">
-    <h1>Hello Texty!</h1>
+    <h1>SMS!</h1>
   </div>
+  <h1> opening text </h1>
+
+<!--prints success message, making it a hash just in case other messages need to be added in the future -->
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
 
   <div class="container" id="app-texty-form">
     <%= form_for @phone, url: '/apps/texty/send_text' do |f| %>

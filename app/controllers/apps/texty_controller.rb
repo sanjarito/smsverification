@@ -8,7 +8,12 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.new(phone_params)
     @phone.send_sms(@phone.clean_number)
     @phone.save
-    redirect_to :back
+    if @phone.save
+      flash[:success] = "Thanks! Your code is on the way please verify!"
+      redirect_to 'new'
+    else
+      render 'new'
+    end
   end
 
   private
