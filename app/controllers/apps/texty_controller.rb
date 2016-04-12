@@ -2,6 +2,8 @@ class Apps::TextyController < ApplicationController
 
   def index
     @phone = Phone.new
+    
+
   end
 
   def send_text
@@ -11,7 +13,8 @@ class Apps::TextyController < ApplicationController
     if @phone.save
 
       redirect_to '/welcome'
-      
+      print "#{phone.id}"
+
     else
       render 'new'
     end
