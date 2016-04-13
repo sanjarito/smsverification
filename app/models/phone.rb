@@ -1,11 +1,9 @@
 class Phone < ActiveRecord::Base
 
-  
+
   include Messenger
 
-  def generate_token
-      self.token = SecureRandom.urlsafe_base64
-  end
+  
 
   def clean_number
     number = self.number.scan(/\d+/).join
