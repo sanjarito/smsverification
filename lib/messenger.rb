@@ -2,7 +2,7 @@ module Messenger
 
   def send_sms(number)
 
-    @phone = Phone_id
+    @hola = 1234
 
 
 
@@ -20,7 +20,7 @@ module Messenger
     message = @client.account.messages.create(
         :from => from,
         :to => '+1'+number,
-        :body =>  ' Your verification code is =  ' + number + "green"
+        :body =>  ' Your verification code is =  ' + number + "green" + @hola
         )
   end
 
