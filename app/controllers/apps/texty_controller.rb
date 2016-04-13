@@ -1,10 +1,10 @@
 class Apps::TextyController < ApplicationController
 
-  # def index
-  #   @phone = Phone.create
-  #
-  #
-  # end
+  def index
+    @phone = Phone.new
+
+
+  end
 
   def send_text
     @phone = Phone.create(phone_params)
