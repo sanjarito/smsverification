@@ -1,6 +1,8 @@
 class Phone < ActiveRecord::Base
 
 
+  include Messenger
+
 
 
   def clean_number
