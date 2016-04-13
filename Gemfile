@@ -6,10 +6,6 @@ gem 'rails', '4.2.3'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0.3'
-<<<<<<< HEAD
-=======
-gem 'uglifier', '>= 1.3.0'
->>>>>>> 9cf2847b7727e027d140cca7021ffb7f308c021e
 gem 'slim-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'nokogiri'
@@ -26,19 +22,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-<<<<<<< HEAD
 # gem 'puma'
 gem 'figaro'
 
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
-=======
-gem 'puma'
-gem 'figaro'
-
-group :development, :test do
->>>>>>> 9cf2847b7727e027d140cca7021ffb7f308c021e
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -48,17 +37,12 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
   gem 'spring'
-<<<<<<< HEAD
   gem 'quiet_assets'
 
 end
 
 
 
-=======
-end
-
->>>>>>> 9cf2847b7727e027d140cca7021ffb7f308c021e
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
