@@ -5,16 +5,17 @@
 
   </div>
 
-  <input type="text" id ="txtBox" />
-  <input type="button" name="btnButton"  value="Submit" onclick="checkValue()" />
-
-  <script type="text/JavaScript">
-  function checkValue() {
-  var secretcode = document.getElementById("txtBox").value;
-  if (secretcode == "1234"){
-  window.location.href = 'secret.html';
-  }
-  }
-  </script>
 
 </div>
+
+<input type="text" id ="txtBox" />
+<input type="button" name="btnButton"  value="Submit" onclick="checkValue()" />
+
+<script type="text/JavaScript">
+function checkValue() {
+var secretcode = document.getElementById("txtBox").value;
+if (secretcode == "1234"){
+window.location.href = 'secret.html';
+}
+}
+</script>
