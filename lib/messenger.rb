@@ -2,7 +2,7 @@ module Messenger
 
   def send_sms(number)
 
-    
+
 
     acct_sid = ENV["TWILIO_ACCT_SID"]
     auth_token = ENV["TWILIO_AUTH"]
