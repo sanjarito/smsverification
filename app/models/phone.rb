@@ -5,7 +5,6 @@ class Phone < ActiveRecord::Base
 
   def generate_token
       self.token = SecureRandom.urlsafe_base64
-      generate_token if ModelName.exists?(token: self.token)
   end
 
   def clean_number
