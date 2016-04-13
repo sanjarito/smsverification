@@ -1570,3 +1570,110 @@ Started GET "/welcome" for ::1 at 2016-04-13 15:27:29 -0700
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.erb within layouts/application (4.2ms)
 Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-13 15:56:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  Rendered apps/texty/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 585ms (Views: 543.9ms | ActiveRecord: 10.4ms)
+
+
+Started POST "/apps/texty/send_text" for ::1 at 2016-04-13 15:56:45 -0700
+Processing by Apps::TextyController#send_text as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTArpgriAwGtnTm0JngV161abdy3L2kuuKztq/tsCDf25WL5jcSmj7rm7TPPqytxyrCVz+5eoDfueRIIt4pKsQ==", "phone"=>{"number"=>"3123913609"}, "commit"=>"Send Text"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.7ms)[0m  [1mINSERT INTO "phones" ("number", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["number", "3123913609"], ["created_at", "2016-04-13 22:56:45.296530"], ["updated_at", "2016-04-13 22:56:45.296530"]]
+  [1m[35m (14.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 1276ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/welcome" for ::1 at 2016-04-13 15:56:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:11: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <h1> @phone </h1> );@output_bu...
+...                               ^
+unmatched close parenthesis: /h1> );@output_buffer.safe_append='
+'.freeze;@output_buffer.append=( text_area "post", "body", "cols" => 20, "rows" => 2 );@output_buffer.safe_append='
+
+<input type="text" id ="txtBox" /
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:15: syntax error, unexpected '<'
+<input type="button" name="btn...
+ ^
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+<input type="button" name="btnButton"  value="Submit" ...
+                         ^
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...button" name="btnButton"  value="Submit" onclick="checkValue...
+...                               ^
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...Button"  value="Submit" onclick="checkValue()" />
+...                               ^
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:15: syntax error, unexpected '>'
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+function checkValue() {
+                   ^
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:20: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:21: syntax error, unexpected $undefined
+window.location.href = \'secret.html\';
+                        ^
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:26: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/santiagocasar/Desktop/smsverification/app/views/welcome/index.erb:28: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/welcome/index.erb:11: syntax error, unexpected '<'
+  app/views/welcome/index.erb:15: syntax error, unexpected '<'
+  app/views/welcome/index.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/welcome/index.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/welcome/index.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/welcome/index.erb:15: syntax error, unexpected '>'
+  app/views/welcome/index.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/welcome/index.erb:20: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+  app/views/welcome/index.erb:21: syntax error, unexpected $undefined
+  app/views/welcome/index.erb:26: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/welcome/index.erb:28: syntax error, unexpected keyword_end, expecting '}'
+
+
+
+
+Started GET "/welcome" for ::1 at 2016-04-13 15:58:23 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (5.3ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-6ab23e892e77da88e18858a9137d4243a9f157d7c8457bfd489a4f931e6df840.js?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/turbolinks.self-b4cb65f20a705cd6b0800a76ad18f9582fa65d4484a04784e70b6a14ea06b96e.js?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/widgets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/application.self-85a3df08aab34bc6a22c0cf18bd349b5a3fda5edca3e6dead5e0390446173b12.js?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/theme.self-d82aef3dd06d7ac1c72cccce309b7ae33dab2020e682e91a01a7e01435634028.css?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-13 15:58:23 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-13 15:58:23 -0700
