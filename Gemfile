@@ -7,6 +7,7 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0.3'
 gem 'slim-rails'
+gem 'uglifier'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'nokogiri'
 gem 'underscore-rails'
