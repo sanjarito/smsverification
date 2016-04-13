@@ -8,16 +8,14 @@ Rails.application.routes.draw do
 
   root 'apps/texty#index'
 
-
   get 'welcome' => 'welcome#index'
-
 
   namespace :apps do
     resources :texty, :only => [:index]
 
 
   post '/texty/send_text' => 'texty#send_text'
-
+  get 'texty/verify'  => 'texty#verify'
   end
 
 
