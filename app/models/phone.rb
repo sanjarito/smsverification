@@ -1,6 +1,6 @@
 class Phone < ActiveRecord::Base
 
-  before_save :generate_token
+  
   include Messenger
 
   def generate_token
