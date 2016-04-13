@@ -2,6 +2,8 @@ module Messenger
 
   def send_sms(number)
 
+    @phone = Phone_id
+
 
 
     acct_sid = ENV["TWILIO_ACCT_SID"]
