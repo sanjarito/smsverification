@@ -1,13 +1,13 @@
 class Apps::TextyController < ApplicationController
 
   def index
-    @phone = Phone.new
+    @phone = Phone.create
 
 
   end
 
   def send_text
-    @phone = Phone.new(phone_params)
+    @phone = Phone.create(phone_params)
     @phone.save
     @phone.send_sms(@phone.clean_number)
 
