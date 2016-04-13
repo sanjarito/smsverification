@@ -23,7 +23,7 @@ class Apps::TextyController < ApplicationController
   private
 
   def phone_params
-    params.require(:phone)
+    params.require(:phone).permit(:number)
   end
 
 end
