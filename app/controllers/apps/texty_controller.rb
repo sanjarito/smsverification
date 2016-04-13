@@ -12,8 +12,8 @@ class Apps::TextyController < ApplicationController
 
     if @phone.save
 
-      redirect_to '/welcome'
 
+      redirect_to '/welcome'
 
     else
       render 'new'
