@@ -8,7 +8,6 @@ class Apps::TextyController < ApplicationController
 
   def send_text
     @phone = Phone.create(phone_params)
-    @phone.save
     @phone.send_sms(@phone.clean_number)
 
     if @phone.save
