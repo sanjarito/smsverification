@@ -1724,3 +1724,10 @@ Migrating to DropWidgets (20160413233436)
 PG::UndefinedTable: ERROR:  table "tablename" does not exist
 : DROP TABLE "tablename"
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropWidgets (20160413234930)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.8ms)[0m  [1mDROP TABLE "products"[0m
+PG::UndefinedTable: ERROR:  table "products" does not exist
+: DROP TABLE "products"
+  [1m[35m (0.2ms)[0m  ROLLBACK
