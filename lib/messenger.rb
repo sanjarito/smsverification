@@ -3,7 +3,7 @@ module Messenger
   def send_sms(number)
 
 
-    
+    @phone = Phone.find(params[:number])
 
 
     acct_sid = ENV["TWILIO_ACCT_SID"]
