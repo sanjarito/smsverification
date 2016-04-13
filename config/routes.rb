@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
 
   post '/texty/send_text' => 'texty#send_text'
-  get 'texty/verify'  => 'texty#verify'
+  get 'texty/validate'  => 'texty#validate'
   end
 
 

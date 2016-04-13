@@ -12,12 +12,16 @@ class Apps::TextyController < ApplicationController
 
     if @phone.save
 
-      redirect_to '/welcome'
+      redirect_to '/texty/validate'
 
 
     else
       render 'new'
     end
+  end
+
+  def validate
+    puts 'hello world'
   end
 
   private
