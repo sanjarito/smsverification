@@ -1,0 +1,24 @@
+<div class="jumbotron text-center">
+  <div class="container">
+ <h1> Thanks! Your code is on the way please enter verification number.</h1>
+
+
+  </div>
+
+
+</div>
+
+
+<%= text_area "post", "body", "cols" => 20, "rows" => 2 %>
+
+<input type="text" id ="txtBox" />
+<input type="button" name="btnButton"  value="Submit" onclick="checkValue()" />
+
+<script type="text/JavaScript">
+function checkValue() {
+var secretcode = document.getElementById("txtBox").value;
+if (secretcode == "1234"){
+window.location.href = 'secret.html';
+}
+}
+</script>
