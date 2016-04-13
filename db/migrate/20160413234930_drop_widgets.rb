@@ -1,5 +1,5 @@
 class DropWidgets < ActiveRecord::Migration
   def change
-     drop_table :products
+     drop_table :widgets
   end
 end
