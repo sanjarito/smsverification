@@ -1703,3 +1703,24 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropWidgets (20160413233436)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.8ms)[0m  [1mDROP TABLE "tablename"[0m
+PG::UndefinedTable: ERROR:  table "tablename" does not exist
+: DROP TABLE "tablename"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropWidgets (20160413233436)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.0ms)[0m  [1mDROP TABLE "tablename"[0m
+PG::UndefinedTable: ERROR:  table "tablename" does not exist
+: DROP TABLE "tablename"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropWidgets (20160413233436)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.0ms)[0m  [1mDROP TABLE "tablename"[0m
+PG::UndefinedTable: ERROR:  table "tablename" does not exist
+: DROP TABLE "tablename"
+  [1m[35m (0.2ms)[0m  ROLLBACK
