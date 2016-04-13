@@ -1,6 +1,6 @@
 module Messenger
 
-  def send_sms(number,id)
+  def send_sms(number)
 
 
 
