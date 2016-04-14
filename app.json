@@ -1,8 +1,8 @@
 {
-  "name": "Heroku Rails sample app",
-  "description": "A barebones Rails app, which can easily be deployed to Heroku",
+  "name": "Heroku Rails app",
+  "description": "A barebones Rails app that can send sms to phone provided through twilio",
   "image": "heroku/ruby",
-  "repository": "https://github.com/heroku/ruby-getting-started",
+  "repository": "https://github.com/sanjarito/smsverification",
   "keywords": ["ruby", "rails" ],
   "addons": [ "heroku-postgresql" ]
 }
