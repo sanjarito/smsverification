@@ -1,3 +1,3 @@
 # ruby-getting-started
 
-A barebones Rails app, that sends sms using twilio Rest api.
+A barebones Rails app, that sends sms using Twilio Rest api.
