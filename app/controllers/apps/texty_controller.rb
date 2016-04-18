@@ -10,7 +10,7 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.create(phone_params)
     @phone.send_sms(@phone.clean_number)
 
-    if @phone.save
+    if @phone.save && defined?(@phone)
 
 
       redirect_to '/apps/texty/verify'
@@ -22,7 +22,7 @@ class Apps::TextyController < ApplicationController
   end
 
   def verify
-  
+
   end
 
 
