@@ -1,5 +1,7 @@
 module Messenger
 
+Messenger.key = "green"
+
   def send_sms(number)
 
 
@@ -20,7 +22,7 @@ module Messenger
     message = @client.account.messages.create(
         :from => from,
         :to => '+1'+number,
-        :body =>  ' Your verification code is =  ' + number + "green"
+        :body =>  ' Your verification code is =  ' + number + key
         )
   end
 
