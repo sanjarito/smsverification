@@ -22,7 +22,7 @@ class Apps::TextyController < ApplicationController
   end
 
   def verify
-
+    @phone = Phone.last
   end
 
 
