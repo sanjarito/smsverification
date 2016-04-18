@@ -1,10 +1,10 @@
 module Messenger
-
-  def send_sms(number)
-
-
+@@foo = 'bar'
+  def send_sms(number,x)
 
 
+
+    @@foo = x
 
     acct_sid = ENV["TWILIO_ACCT_SID"]
     auth_token = ENV["TWILIO_AUTH"]

@@ -10,7 +10,9 @@
     <%= form_for @phone, url: '/apps/texty/send_text' do |f| %>
     <%= f.label :number, 'Enter Your Phone Number' %>
     <%= f.telephone_field :number, class: 'form-control', placeholder: '###-###-####' %>
-    
+    <%= f.label :code, 'Enter A secretcode' %>
+    <%= f.telephone_field :code, class: 'form-control', placeholder: '###' %>
+
     <br>
     <%= f.submit 'Send Text', class: 'btn btn-primary' %>
     <% end %>
