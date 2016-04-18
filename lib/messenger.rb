@@ -1,6 +1,6 @@
 module Messenger
 
-Messenger.key = "green"
+
 
   def send_sms(number)
 
