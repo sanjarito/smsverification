@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 
-
+gem 'gon', '~> 6.0', '>= 6.0.1'
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'rails_12factor', group: :production

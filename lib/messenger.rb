@@ -1,26 +1,27 @@
 module Messenger
-@@foo = 'bar'
-  def send_sms(number,x)
+  def send_sms(number)
 
 
-
-    @@foo = x
 
     acct_sid = ENV["TWILIO_ACCT_SID"]
     auth_token = ENV["TWILIO_AUTH"]
 
 
 
+
     @client = Twilio::REST::Client.new acct_sid, auth_token
+    # @client = Twilio::REST::TaskRouterClient.new acct_sid, auth_token, workspace_sid
 
+
+    token = "green"
     from = '+18446946384'
-
 
 
     message = @client.account.messages.create(
         :from => from,
         :to => '+1'+number,
-        :body =>  ' Your verification code is =  ' + number + "green"
+
+        :body =>  ' Your verification code is =  ' + number + token
         )
   end
 

@@ -12,13 +12,19 @@ class Apps::TextyController < ApplicationController
 
     if @phone.save
 
-      redirect_to '/welcome'
+
+      redirect_to '/apps/texty/verify'
 
 
     else
       render 'new'
     end
   end
+
+  def verify
+  
+  end
+
 
   private
 
