@@ -6130,3 +6130,120 @@ Processing by Apps::TextyController#verify as HTML
   [1m[36mPhone Load (1.8ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
   Rendered apps/texty/verify.html.erb within layouts/application (43.6ms)
 Completed 200 OK in 538ms (Views: 533.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-04-19 15:24:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  Rendered apps/texty/index.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 612ms (Views: 554.9ms | ActiveRecord: 23.8ms)
+
+
+Started POST "/apps/texty/send_text" for ::1 at 2016-04-19 15:24:34 -0700
+Processing by Apps::TextyController#send_text as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"myNdGnk4rXLBJwYVesoQ3ZDz3E0qXHqQxJkQx3CvhDB09hRF/h4I/NZc0pKTGS579xkkXnMts4mSTO9kPEnGtg==", "phone"=>{"number"=>"3123913609", "vercode"=>"1234"}, "commit"=>"Send Text"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (18.8ms)[0m  [1mINSERT INTO "phones" ("number", "vercode", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["number", "3123913609"], ["vercode", "1234"], ["created_at", "2016-04-19 22:24:34.543826"], ["updated_at", "2016-04-19 22:24:34.543826"]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 1264ms (ActiveRecord: 22.7ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 15:24:35 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (1.0ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-04-19 15:24:46 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5sy6yktX/w+0tjGtF9x9A3gaNOO7tFctHCC4QoGhBg4JGfOVzHFagaPN5Sr+D0OlH/DM8OLFnjRK9UfhzUdEiA==", "phone"=>{"vercode"=>"324234234"}, "commit"=>"Verify"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `vercode' for nil:NilClass):
+  app/controllers/apps/texty_controller.rb:30:in `update'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (635.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (744.1ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-04-19 15:25:11 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5sy6yktX/w+0tjGtF9x9A3gaNOO7tFctHCC4QoGhBg4JGfOVzHFagaPN5Sr+D0OlH/DM8OLFnjRK9UfhzUdEiA==", "phone"=>{"vercode"=>"324234234"}, "commit"=>"Verify"}
+  [1m[35mPhone Load (1.1ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 51ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 15:25:12 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 582ms (Views: 579.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 15:25:12 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-19 15:25:13 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-19 15:25:13 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 15:25:13 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 15:25:13 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 15:26:11 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 37.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 15:26:11 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-19 15:26:11 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 15:26:11 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-19 15:26:11 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 15:26:11 -0700
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-04-19 15:26:27 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQe/em4sh2D9OukXA357k+N2ECHBXsVI2TNjNBzH1jNu0vYl6Qoi7upBPZDqrUU1hJzoMpgvDFGP5pyXUCGUtQ==", "phone"=>{"vercode"=>"1234"}, "commit"=>"Verify"}
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 94ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 15:26:27 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.3ms)
