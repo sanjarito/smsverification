@@ -23,8 +23,16 @@ class Apps::TextyController < ApplicationController
 
   def verify
     @phone = Phone.last
-    @phone.save(params)
+
   end
+
+  def go
+    @phone = Phone.last
+    @phone.save
+
+  end
+
+
 
 
   private

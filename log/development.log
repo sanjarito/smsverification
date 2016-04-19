@@ -5122,3 +5122,279 @@ Processing by Apps::TextyController#verify as HTML
   [1m[35m (0.1ms)[0m  COMMIT
   Rendered apps/texty/verify.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-04-19 11:31:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  Rendered apps/texty/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 587ms (Views: 536.0ms | ActiveRecord: 18.0ms)
+
+
+Started POST "/apps/texty/send_text" for ::1 at 2016-04-19 11:31:36 -0700
+Processing by Apps::TextyController#send_text as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILakeliLWBhJmnjmLp+qrLvmo90B+4YAf1PuyS3kUMjPY+0l3639ll7hrGHHTJQK3AxbzliKTxkphhFqYQISTg==", "phone"=>{"number"=>"3123913609"}, "commit"=>"Send Text"}
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "phones" ("number", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["number", "3123913609"], ["created_at", "2016-04-19 18:31:36.149068"], ["updated_at", "2016-04-19 18:31:36.149068"]]
+  [1m[35m (12.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 1264ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 11:31:37 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.6ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 11:32:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.6ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 556ms (Views: 527.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:32:23 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-19 11:32:23 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:32:23 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-19 11:32:23 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:32:23 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 11:32:32 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:32:32 -0700
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:32:32 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-19 11:32:32 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:32:32 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-19 11:32:32 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-19 11:33:26 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 61ms (Views: 41.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:33:26 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-19 11:33:26 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:33:26 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-19 11:33:26 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-19 11:33:26 -0700
+
+
+Started PATCH "/apps/texty/go" for ::1 at 2016-04-19 11:33:31 -0700
+
+ActionController::RoutingError (No route matches [PATCH] "/apps/texty/go"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+  puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+  puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (117.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (655.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (754.9ms)
+
+
+Started PATCH "/apps/texty/go" for ::1 at 2016-04-19 11:37:48 -0700
+Processing by Apps::TextyController#go as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lrT+FQxCWFd4FburP7mJPBT8X6zlxHbgk1mJQlN8vLx5YbdKi2T92W9ubyzWareacxanv7y1v/nFjHbhH5r+Og==", "phone"=>{"vercode"=>"3123124234"}, "commit"=>"Verify"}
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 4.9ms)
+
+ActionView::MissingTemplate (Missing template apps/texty/go, application/go with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :slim, :coffee, :jbuilder]}. Searched in:
+  * "/Users/santiagocasar/Desktop/Sms App/smsverification/app/views"
+):
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/santiagocasar/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+  puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+  puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+  puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (90.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (154.5ms)
+
+
+Started PATCH "/apps/texty/go" for ::1 at 2016-04-19 11:38:59 -0700
+Processing by Apps::TextyController#go as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lrT+FQxCWFd4FburP7mJPBT8X6zlxHbgk1mJQlN8vLx5YbdKi2T92W9ubyzWareacxanv7y1v/nFjHbhH5r+Og==", "phone"=>{"vercode"=>"3123124234"}, "commit"=>"Verify"}
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  Rendered apps/texty/go.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.8ms)
