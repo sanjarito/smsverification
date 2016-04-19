@@ -13,7 +13,7 @@ module Messenger
     # @client = Twilio::REST::TaskRouterClient.new acct_sid, auth_token, workspace_sid
 
 
-    
+
     from = '+18446946384'
 
 
@@ -21,7 +21,7 @@ module Messenger
         :from => from,
         :to => '+1'+number,
 
-        :body =>  ' Welcome =  ' + number + vercode
+        :body =>  ' Welcome, your verification number is =  ' + number + vercode + 'red'
         )
     end
 end

@@ -29,7 +29,7 @@ class Apps::TextyController < ApplicationController
   def update
 
     @phone = Phone.last
-    @vercodechange = @phone.vercode + "123"
+    @vercodechange = @phone.vercode + "red"
       if @vercodechange === params[:phone][:vercode]
         redirect_to ("http://www.scasar.com")
       else
