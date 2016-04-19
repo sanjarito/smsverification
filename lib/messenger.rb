@@ -21,7 +21,7 @@ module Messenger
         :from => from,
         :to => '+1'+number,
 
-        :body =>  ' Welcome your verification token is =  ' + vercode + number
+        :body =>  ' Welcome =  ' + number + token
         )
     end
 end
