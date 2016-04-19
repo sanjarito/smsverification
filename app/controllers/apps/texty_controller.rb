@@ -28,7 +28,7 @@ class Apps::TextyController < ApplicationController
 
   def update
     @phone = Phone.last
-      if @phone.vercode + "123" === params[:phone][:vercode] "123"
+      if @phone.vercode === params[:phone][:vercode]
         redirect_to ("http://www.scasar.com")
       else
         flash[:alert]="Ver code is invalid"
