@@ -17,6 +17,8 @@ class Apps::TextyController < ApplicationController
 
 
     else
+      flash[:alert]="Ver code is invalid"
+      flash[:color]="invalid"
       render 'new'
     end
   end
