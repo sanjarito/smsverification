@@ -23,14 +23,14 @@ class Apps::TextyController < ApplicationController
 
   def verify
     @phone = Phone.last
-    
+    @phone.save(params)
   end
 
 
   private
 
   def phone_params
-    params.require(:phone).permit(:number)
+    params.require(:phone).permit(:number,:vercode)
   end
 
 end
