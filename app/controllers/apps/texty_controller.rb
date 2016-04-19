@@ -26,11 +26,14 @@ class Apps::TextyController < ApplicationController
 
   end
 
-  def go
+  def update
     @phone = Phone.last
-    @phone.save
+    if @phone.update(phone_params)
+    else
+        render :new
+    end
+end
 
-  end
 
 
 
