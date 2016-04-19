@@ -33,7 +33,7 @@ class Apps::TextyController < ApplicationController
       else
         flash[:alert]="Ver code is invalid"
       flash[:color]="invalid"
-      
+      redirect_to :action => 'verify'
       end
   end
 
