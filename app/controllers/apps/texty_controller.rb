@@ -8,13 +8,16 @@ class Apps::TextyController < ApplicationController
 
   def send_text
     @phone = Phone.create(phone_params)
-    if @phone.send_sms(@phone.clean_number)
-        redirect_to '/apps/texty/verify'
-      else
-        flash[:alert]="Ver code is invalid"
-        flash[:color]="invalid"
-        render 'new'
+    @phone.send_sms(@phone.clean_number)
 
+    if @phone.save && defined?(@phone.number)
+
+
+      redirect_to '/apps/texty/verify'
+
+
+    else
+      render 'new'
     end
   end
 
@@ -25,13 +28,13 @@ class Apps::TextyController < ApplicationController
 
   def update
     @phone = Phone.last
-    if @phone.update(phone_params)
-    else
-      flash[:alert]="Ver code is invalid"
-    flash[:color]="invalid"
-    redirect_to :action => 'verify'
-    end
-end
+      if @phone.update(phone_params)
+      else
+        flash[:alert]="Ver code is invalid"
+      flash[:color]="invalid"
+      redirect_to :action => 'verify'
+      end
+  end
 
 
 

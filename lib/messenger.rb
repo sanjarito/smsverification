@@ -1,5 +1,5 @@
 module Messenger
-  def send_sms(number)
+    if def send_sms(number)
 
 
 
@@ -23,6 +23,8 @@ module Messenger
 
         :body =>  ' Welcome =  ' + number + token
         )
-  end
+    end
+  else redirect_to 'apps/texty'
+    end
 
 end
