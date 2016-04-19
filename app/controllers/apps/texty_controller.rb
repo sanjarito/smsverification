@@ -30,7 +30,9 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.last
     if @phone.update(phone_params)
     else
-        render :new
+      flash[:alert]="Ver code is invalid"
+    flash[:color]="invalid"
+    redirect_to :action => 'verify'
     end
 end
 
