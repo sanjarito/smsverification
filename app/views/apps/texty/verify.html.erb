@@ -8,15 +8,15 @@
 </div>
 
 
-<%= text_area "post", "body", "cols" => 20, "rows" => 2 %>
 
-<!-- <div class="container" id="app-texty-form">
-  <%= form_for @phone, url: '/apps/texty/send_text' do |f| %>
-  <%= f.label :number, 'Enter Your Phone Number' %>
-  <%= f.telephone_field :number, class: 'form-control', placeholder: '###-###-####' %>
+
+<div class="container" id="app-texty-form-verify">
+  <%= form_for @phone, url: '/apps/texty/verify' do |f| %>
+  <%= f.label :vercode, 'Enter your verification code' %>
+  <%= f.telephone_field :vercode, class: 'form-control', placeholder: '############' %>
 
 
   <br>
-  <%= f.submit 'Send Text', class: 'btn btn-primary' %>
+  <%= f.submit 'Verify', class: 'btn btn-primary' %>
   <% end %>
-</div> -->
+</div>
