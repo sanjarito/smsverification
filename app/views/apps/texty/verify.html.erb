@@ -4,6 +4,7 @@
 
   </div>
 
+<%= debug(params) if Rails.env.development? %>
 
 </div>
 
@@ -11,7 +12,7 @@
 
 
 <div class="container" id="app-texty-form-verify-go">
-  <%= form_for @phone, url: '/apps/texty/update', :html => { :onsubmit => 'checkValue();' } do |f| %>
+  <%= form_for @phone, url: '/apps/texty/update'  do |f| %>
   <%= f.label :vercode, 'Enter your verification code' %>
   <%= f.password_field :vercode, class: 'form-control', placeholder: '############' %>
 
@@ -20,14 +21,3 @@
   <%= f.submit 'Verify', class: 'btn btn-primary'%>
   <% end %>
 </div>
-
-<script>
-function checkValue() {
-
-var secretcode = document.getElementById("phone_vercode").value;
-if (secretcode == "1234"){
-window.location.href = 'secret.html';
-puts "basfasfasfasfasf"
-}
-}
-</script>

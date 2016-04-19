@@ -1,5 +1,5 @@
 module Messenger
-    def send_sms(number)
+    def send_sms(number,vercode)
 
 
 
