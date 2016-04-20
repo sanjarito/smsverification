@@ -31,7 +31,7 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.last
     @vercodechange = @phone.vercode + "red"
       if @vercodechange === params[:phone][:vercode]
-        redirect_to ("http://instantsignup.pixfizz.com/site")
+        redirect_to '/apps/texty/authcallback'
       else
         flash[:alert]="Ver code is invalid"
       flash[:color]="invalid"
