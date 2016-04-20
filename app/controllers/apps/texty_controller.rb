@@ -40,8 +40,8 @@ class Apps::TextyController < ApplicationController
   end
 
   def authcallback
-    @phone = Phone.last
-    @vercode = Vercode.last
+    # @phone = Phone.last
+    # @vercode = Vercode.last
 
   end
 
