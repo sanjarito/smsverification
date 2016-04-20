@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     get '/texty/verify' => 'texty#verify'
     patch '/texty/update' => 'texty#update'
 
+    get '/texty/authcallback' => 'texty#authcallback'
+
+
   end
 
 
