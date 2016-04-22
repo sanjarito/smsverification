@@ -4,6 +4,7 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.new
 
 
+
   end
 
   def send_text
@@ -22,7 +23,9 @@ class Apps::TextyController < ApplicationController
   end
 
   def verify
+
     @phone = Phone.last
+
 
   end
 
@@ -31,7 +34,7 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.last
     @vercodechange = @phone.vercode + "red"
       if @vercodechange === params[:phone][:vercode]
-        redirect_to '/apps/texty/authcallback'
+        redirect_to '/apps/api'
       else
         flash[:alert]="Ver code is invalid"
       flash[:color]="invalid"
@@ -40,8 +43,10 @@ class Apps::TextyController < ApplicationController
   end
 
   def authcallback
-    # @phone = Phone.last
-    # @vercode = Vercode.last
+    @phone = Phone.last
+
+
+
 
   end
 
