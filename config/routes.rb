@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   root 'apps/texty#index'
 
-
+  resources :users
 
   namespace :apps do
     resources :texty, :only => [:index]
