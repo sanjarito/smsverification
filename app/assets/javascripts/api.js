@@ -7,7 +7,7 @@ function submitForm(){
          dataType: 'jsonp',
          username: 'santiago_casar@pixfizz.com',
          password: 'Detech28!!',
-         data: "user[custom]=312391332",
+         data: "user[first_name]=gladiator",
          success: function(data){
            console.log('succes: '+data);
          }
