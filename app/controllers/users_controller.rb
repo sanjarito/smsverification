@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     def index
       @phone = Phone.last
       @user = User.new
-      @user = User.last
       uri = "#{API_BASE_URL}/users.json" # specifying json format in the URl
       rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD) # create new rest-client resource to call methods on it
       users = rest_resource.get # will get back you all the detail in json format, but it will we wraped as string, so we will parse it in the next step.

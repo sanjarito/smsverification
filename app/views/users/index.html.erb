@@ -10,7 +10,7 @@
 
 <%= link_to "Create New User", new_user_path %>
 <%if @users.present? %>
-<h1> <%= @users[-1][:id] %>
+<h1> <%= @users[-1][:id] + @user %>
   <p>Below is the list of users</p>
   <table width="100%">
     <tr>
