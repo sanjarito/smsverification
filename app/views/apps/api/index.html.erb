@@ -7,23 +7,11 @@
 <%= javascript_include_tag "api.js" %>
 
 
-<script>
-function submitForm(){
-  alert("we are inside button function");
-     $.ajax({
-         url: 'http://santiago.pixfizz.com/v1/admin/users/2760630',
-         headers: {
-             'Authorization':'Basic xxxxxxxxxxxxx',
-             'X_CSRF_TOKEN':'xxxxxxxxxxxxxxxxxxxx',
-             'Content-Type':'application/json'
-         },
-         method: 'POST',
-         data: YourData,
-         success: function(data){
-           console.log('succes: '+data);
-         }
-       });
-</script>
+
+<script type="text/javascript"
+        src="//api.pixfizz.com/js_api/start-0.4.2.js"
+        data-px-website="instantsignup.pixfizz.com"></script>
+
 
 
 </div>
