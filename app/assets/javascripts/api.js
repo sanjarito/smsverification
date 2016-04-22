@@ -8,8 +8,8 @@ function submitForm(){
          username: 'santiago_casar@pixfizz.com',
          password: 'Detech28!!',
          data: "user[first_name]=gladiator",
-         success: function(data){
-           console.log('succes: '+data);
-         }
+        //  success: function(data){
+        //    console.log('succes: '+data);
+        //  }
        });
 }
