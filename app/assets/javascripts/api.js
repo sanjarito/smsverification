@@ -8,7 +8,6 @@ function submitForm(){
              'Content-Type':'application/json'
          },
          method: 'POST',
-         dataType: 'json',
          data: YourData,
          success: function(data){
            console.log('succes: '+data);
