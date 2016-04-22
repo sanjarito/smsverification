@@ -14281,3 +14281,230 @@ Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5
 
 
 Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:28:01 -0700
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:39:58 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mPhone Load (1.2ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+Completed 500 Internal Server Error in 523ms (ActiveRecord: 7.7ms)
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/users_controller.rb:17:in `index'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (614.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (731.8ms)
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:42:45 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+Completed 500 Internal Server Error in 918ms (ActiveRecord: 5.6ms)
+
+NameError (undefined local variable or method `current_user' for #<UsersController:0x007f90729186b0>):
+  app/controllers/users_controller.rb:17:in `index'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.7ms)
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:43:20 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+Completed 500 Internal Server Error in 490ms (ActiveRecord: 4.9ms)
+
+NameError (undefined local variable or method `user_id' for #<UsersController:0x007f9072bcc618>):
+  app/controllers/users_controller.rb:17:in `index'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (660.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (758.7ms)
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:43:38 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17419162]]
+  Rendered users/index.html.erb within layouts/application (388.7ms)
+Completed 200 OK in 962ms (Views: 479.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:43:39 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:43:39 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:43:39 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-22 13:43:39 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-22 13:43:40 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:43:40 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-22 13:43:40 -0700
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:44:19 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17419162]]
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 432ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:44:20 -0700
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:45:11 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17419395]]
+  Rendered users/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 1080ms (Views: 71.8ms | ActiveRecord: 0.8ms)
+
+
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-22 13:45:13 -0700
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:47:58 -0700
+Processing by UsersController#index as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 17419395]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "users" ("id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 17419395], ["created_at", "2016-04-22 20:47:59.526251"], ["updated_at", "2016-04-22 20:47:59.526251"]]
+  [1m[35m (14.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/
+Completed 302 Found in 950ms (ActiveRecord: 28.7ms)
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:47:59 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17419395]]
+  Rendered users/index.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 514ms (Views: 163.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-22 13:48:00 -0700
+
+
+Started GET "/users/" for ::1 at 2016-04-22 13:48:03 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17419395]]
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1014ms (Views: 20.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:04 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:04 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-22 13:48:04 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-22 13:48:04 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:04 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-22 13:48:04 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-22 13:48:04 -0700
