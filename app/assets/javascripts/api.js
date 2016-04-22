@@ -4,7 +4,7 @@ function submitForm(){
      $.ajax({
          url: 'https://santiago.pixfizz.com/v1/admin/users/:2760630',
          method: 'PUT',
-         dataType: 'json',
+         dataType: 'jsonp',
          username: 'santiago_casar@pixfizz.com',
          password: 'Detech28!!',
          data: "user[custom]=312391332",
