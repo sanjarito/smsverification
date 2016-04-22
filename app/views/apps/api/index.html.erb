@@ -2,15 +2,12 @@
   <div class="container">
  <h1> <%= 'Your phone: '+ @phone.number %> <br> <%= 'Your vercode: ' + @phone.vercode %></h1>
 
-<button type="button" id="apibutton"> Send data</button>
+<button type="button" onclick="submitForm()"> Send data</button>
 
 <%= javascript_include_tag "api.js" %>
 
 
 
-<script type="text/javascript"
-        src="//api.pixfizz.com/js_api/start-0.4.2.js"
-        data-px-website="instantsignup.pixfizz.com"></script>
 
 
 
