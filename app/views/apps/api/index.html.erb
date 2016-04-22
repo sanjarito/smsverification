@@ -2,7 +2,7 @@
   <div class="container">
  <h1> <%= 'Your phone: '+ @phone.number %> <br> <%= 'Your vercode: ' + @phone.vercode %></h1>
 
-<button type="button" onclick="submitForm()"> Send data</button>
+<button type="button" id="apibutton"> Send data</button>
 
 <%= javascript_include_tag "api.js" %>
 

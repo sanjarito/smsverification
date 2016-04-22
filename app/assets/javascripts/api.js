@@ -1,5 +1,4 @@
-function submitForm(){
-  alert("we are inside button function");
+$('#apibutton').click(function(){
 
      $.ajax({
          url: 'https://santiago.pixfizz.com/v1/admin/users/::2760630',
