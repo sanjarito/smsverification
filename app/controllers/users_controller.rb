@@ -12,6 +12,7 @@ class UsersController < ApplicationController
       rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD) # create new rest-client resource to call methods on it
       users = rest_resource.get # will get back you all the detail in json format, but it will we wraped as string, so we will parse it in the next step.
       @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
+      @user = User.create(user_params)
 
     end
 
@@ -19,5 +20,10 @@ class UsersController < ApplicationController
 
     end
 
+    private
+
+    def phone_params
+      params.require(:id)
+    end
 
 end
