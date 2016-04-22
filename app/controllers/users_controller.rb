@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       @user.id = @users[-1][:id]
       if !User.exists?(@user.id)
       @user.save
-      redirect_to '/users/new'
+      redirect_to '/users/show'
      else
 
      end
@@ -26,14 +26,18 @@ class UsersController < ApplicationController
 
     end
 
-    def new
+    def show
+      @phone = Phone.last
+      @user = User.last
+      uri = "#{API_BASE_URL}/users/2760630" # specifying json format in the URl
+      rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
+      rest_resource.put("http://instantsignup.pixfizz.com/v1/admin/users/2760630", :first_name => 'bob marley', :last_name => 'la llorona')
+
 
     end
 
     private
 
-    def phone_params
-      params.require(:id)
-    end
+
 
 end
