@@ -14,7 +14,15 @@ class UsersController < ApplicationController
       users = rest_resource.get # will get back you all the detail in json format, but it will we wraped as string, so we will parse it in the next step.
       @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
       @user.id = @users[-1][:id]
+      if User.find_by_id(@user.id) == nil?
       @user.save
+      redirect_to '/users/'
+     else
+      
+     end
+
+
+
 
     end
 

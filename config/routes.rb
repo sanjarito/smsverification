@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   namespace :apps do
     resources :texty, :only => [:index]
-    resources :api
+    
 
 
   post '/texty/send_text' => 'texty#send_text'
