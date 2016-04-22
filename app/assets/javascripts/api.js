@@ -2,8 +2,8 @@ function submitForm(){
   alert("we are inside button function");
 
      $.ajax({
-         url: 'https://santiago.pixfizz.com/v1/admin/users/:2760630',
-         method: 'PUT',
+         url: 'https://santiago.pixfizz.com/v1/admin/users/2760630',
+         method: 'PATCH',
          dataType: 'jsonp',
          username: 'santiago_casar@pixfizz.com',
          password: 'Detech28!!',
