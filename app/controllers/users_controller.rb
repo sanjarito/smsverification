@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       @user.id = @users[-1][:id]
       if !User.exists?(@user.id)
       @user.save
-      redirect_to '/users/'
+      redirect_to '/users/new'
      else
 
      end
