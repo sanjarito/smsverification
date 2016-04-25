@@ -29,9 +29,9 @@ class UsersController < ApplicationController
     def show
       @phone = Phone.last
       @user = User.last
-      uri = "#{API_BASE_URL}/users/2760630.json" # specifying json format in the URl
+      uri = "https://instantsignup.pixfizz.com/v1/admin//users/2760630.json" # specifying json format in the URl
       rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
-      rest_resource.put "http://instantsignup.pixfizz.com/v1/admin/users/2760630", {"user":{"first_name":"juan"}}
+      rest_resource.post "https://instantsignup.pixfizz.com/v1/admin/users/2760630", {"user":{"custom":{"telephone": 3214324}}}
 
 
     end
