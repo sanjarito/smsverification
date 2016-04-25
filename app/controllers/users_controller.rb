@@ -16,7 +16,8 @@ class UsersController < ApplicationController
       @user.id = @users[-1][:id]
       if !User.exists?(@user.id)
       @user.save
-      redirect_to '/users/show'
+      rest_resource.post 'http://instantsignup.pixfizz.com/v1/admin/users/2760630', :nested => {:first_name => 'juancho'}
+
      else
 
      end
@@ -24,17 +25,22 @@ class UsersController < ApplicationController
 
 
 
-
+    end
 
     def show
-      @phone = Phone.last
-      @user = User.last
-      uri = "https://instantsignup.pixfizz.com/v1/admin//users/2760630.json" # specifying json format in the URl
-      rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
-      rest_resource.post "https://instantsignup.pixfizz.com/v1/admin/users/2760630", {"user":{"custom":{"telephone": 3214324}}}
+      # @phone = Phone.last
+      # @user = User.last
+      # uri = "#{API_BASE_URL}/users/2760630" # specifying json format in the URl
+      # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
+      # rest_resource.put 'http://instantsignup.pixfizz.com/v1/admin/users/2760630', :user[first_name] => 'bob marley', :user[last_name] => 'la llorona')
 
 
     end
 
-end
+    # private
+    #
+    # def phone_params
+    #   params.require(:id)
+    # end
+
 end
