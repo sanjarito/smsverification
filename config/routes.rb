@@ -8,11 +8,12 @@ Rails.application.routes.draw do
 
   root 'apps/texty#index'
 
-  resources :users
+  resources :users, :only => [:index]
+  patch 'users/update' => 'users#update'
 
   namespace :apps do
     resources :texty, :only => [:index]
-    
+
 
 
   post '/texty/send_text' => 'texty#send_text'
