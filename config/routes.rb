@@ -8,8 +8,7 @@ Rails.application.routes.draw do
 
   root 'apps/texty#index'
 
-  resources :users, :only => [:index]
-  patch 'users/update' => 'users#update'
+  resources :users
 
   namespace :apps do
     resources :texty, :only => [:index]

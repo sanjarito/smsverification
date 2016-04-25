@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       @user.id = @users[-1][:id]
       if !User.exists?(@user.id)
       @user.save
-      redirect_to '/users/update'
+      # redirect_to '/users/update'
 
 
      else
@@ -25,18 +25,16 @@ class UsersController < ApplicationController
      end
 
 
-     redirect_to '/users/update'
+    #  redirect_to '/users/update'
 
 
     end
-
-    def update
-      @phone = Phone.last
-      @user = User.last
-        uri = "#{API_BASE_URL}/users/2760630" # specifying json format in the URl
-
-         RestClient.post 'http://instantsignup.pixfizz.com/v1/admin/users/2760630', {:user => {:custom => {:telephone => "123123"}.to_json}}
-       end
+    # def update
+    #   @phone = Phone.last
+    #   @user = User.last
+    #     uri = "#{API_BASE_URL}/users/2760630" # specifying json format in the URl
+    #      RestClient.post 'http://instantsignup.pixfizz.com/v1/admin/users/2760630', {:user => {:custom => {:telephone = "123123"}.to_json}
+    #    end
 
 
 
