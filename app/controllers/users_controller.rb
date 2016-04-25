@@ -14,9 +14,10 @@ class UsersController < ApplicationController
       users = rest_resource.get # will get back you all the detail in json format, but it will we wraped as string, so we will parse it in the next step.
       @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
       @user.id = @users[-1][:id]
+      rest_resource.post 'http://instantsignup.pixfizz.com/v1/admin/users/2760630', :nested => {:first_name => 'juancho'}
       if !User.exists?(@user.id)
       @user.save
-      rest_resource.post 'http://instantsignup.pixfizz.com/v1/admin/users/2760630', :nested => {:first_name => 'juancho'}
+      
 
      else
 
