@@ -11,6 +11,7 @@
 <%= link_to "Create New User", new_user_path %>
 <%if @users.present? %>
 <h1> <%= @user.id %> </h1>
+<h1> <%= @user.email %> </h1>
   <p>Below is the list of users</p>
   <table width="100%">
     <tr>
