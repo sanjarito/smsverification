@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
 
 
-    end
+
 
     def show
       @phone = Phone.last
@@ -36,8 +36,5 @@ class UsersController < ApplicationController
 
     end
 
-    private
-
-
-
+end
 end
