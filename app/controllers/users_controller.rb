@@ -24,13 +24,31 @@ class UsersController < ApplicationController
      else
 
      end
-      RestClient::Resource.new(USERNAME,PASSWORD).post('http://instantsignup.pixfizz.com/v1/users/2760630', {:user => {:custom => {:telephone => "123123"}.to_json}})  do |response, request, result, &block|
-  if [301, 302, 307].include? response.code
-    redirected_url = response.headers[:location]
-  else
-    response.return!(request, result, &block)
-  end
+
+     RestClient::Resource.new(USERNAME,PASSWORD).put('http://instantsignup.pixfizz.com/v1/users/2760630', {:user => {:custom => {:telephone => "123123"}.to_json}}) do |response, request, result, &block|
+       if [301, 302, 307].include? response.code
+         redirected_url = response.headers[:location]
+       else
+         response.return!(request, result, &block)
+       end
+     end
+
+      # posting = RestClient::Resource.new('https://instantsignup.pixfizz.com/v1/users', :user => USERNAME, :password => PASSWORD)
+      # posting.post('/17527289', {:user => {:custom => {:telephone => "123123"}.to_json}})
+
+
+
+
 end
+
+
+    #   RestClient::Resource.new(USERNAME,PASSWORD).post('http://instantsignup.pixfizz.com/v1/users/2760630', {:user => {:custom => {:telephone => "123123"}.to_json}})  do |response, request, result, &block|
+    #   if [301, 302, 307].include? response.code
+    #     redirected_url = response.headers[:location]
+    #   else
+    #     response.return!(request, result, &block)
+    #   end
+    # end
 # rest_resource_put.put "/2760630", {:user => {:custom => {:telephone => "123123"}.to_json}}
 
  #     RestClient::Request.execute(
@@ -40,7 +58,7 @@ end
  # password: PASSWORD,
  # payload: { 'user[first_name]' => 'Juancho' }
 # )
-    end
+
 
     # def update
     #   @phone = Phone.last

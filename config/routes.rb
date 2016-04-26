@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # get '/users' => 'users#index'
   # post '/users/update' => 'users#update'
 
-
+  post '/users/pixfizzpost' => 'users#pixfizzpost', :as =>'pixfizzpost'
   namespace :apps do
     resources :texty, :only => [:index]
 
