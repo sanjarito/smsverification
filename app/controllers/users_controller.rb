@@ -24,7 +24,7 @@ class UsersController < ApplicationController
      else
 
      end
-      RestClient::Resource.new(USERNAME,PASSWORD).post('http://instantsignup.pixfizz.com/v1/admin/users/17527289', {:user => {:custom => {:telephone => "123123"}.to_json}})  do |response, request, result, &block|
+      RestClient::Resource.new(USERNAME,PASSWORD).post('http://instantsignup.pixfizz.com/v1/users/2760630', {:user => {:custom => {:telephone => "123123"}.to_json}})  do |response, request, result, &block|
   if [301, 302, 307].include? response.code
     redirected_url = response.headers[:location]
   else
