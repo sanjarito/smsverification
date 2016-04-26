@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   root 'apps/texty#index'
 
   resources :users
+  # get '/users' => 'users#index'
+  # post '/users/update' => 'users#update'
+
 
   namespace :apps do
     resources :texty, :only => [:index]
@@ -20,6 +23,7 @@ Rails.application.routes.draw do
     patch '/texty/update' => 'texty#update'
 
     get '/texty/authcallback' => 'texty#authcallback'
+
 
 
 
