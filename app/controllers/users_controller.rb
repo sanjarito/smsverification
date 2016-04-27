@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   require 'json'
   require 'open-uri'
 
-    USERNAME = "santiago_casar@pixfizz.com" # needed to access the APi
-    PASSWORD = "Detech28!!" # needed to access the APi
-    API_BASE_URL = "http://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
+    USERNAME = "Api@hotmail.com" # needed to access the APi
+    PASSWORD = "Api2000" # needed to access the APi
+    API_BASE_URL = "https://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
 
     def index
       @phone = Phone.last

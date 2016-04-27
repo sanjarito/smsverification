@@ -23721,3 +23721,115 @@ Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b93
 
 
 Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-26 16:03:00 -0700
+
+
+Started GET "/" for ::1 at 2016-04-27 16:47:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (12.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  Rendered apps/texty/index.html.erb within layouts/application (49.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 16:47:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  Rendered apps/texty/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 564ms (Views: 508.2ms | ActiveRecord: 27.0ms)
+Completed 200 OK in 347ms (Views: 317.1ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/apps/texty/send_text" for ::1 at 2016-04-27 16:48:00 -0700
+Processing by Apps::TextyController#send_text as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sCVe5y08VE1sPEwc93vOrEkoTfntF/dlVqA2O769JnHuzO1RRxkt5GFXBFZTaQ3OfMuu4zVplVSlW2Cf+0gnoQ==", "phone"=>{"number"=>"3123913609", "vercode"=>"11"}, "commit"=>"Send Text"}
+  [1m[35m (12.1ms)[0m  BEGIN
+  [1m[36mSQL (45.9ms)[0m  [1mINSERT INTO "phones" ("number", "vercode", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["number", "3123913609"], ["vercode", "11"], ["created_at", "2016-04-27 23:48:00.799972"], ["updated_at", "2016-04-27 23:48:00.799972"]]
+  [1m[35m (3.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 1300ms (ActiveRecord: 62.6ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-04-27 16:48:02 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (8.2ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 37ms (Views: 25.8ms | ActiveRecord: 8.2ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-04-27 16:48:06 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"likF+dHHdo2h2M4lIzQtU5nRBXUzAS85s084FlSZ16PIwLZPu+IPJKyzhm+HJu4xrDLmb+t/TQhAtG6yEWzWcw==", "phone"=>{"vercode"=>"11red"}, "commit"=>"Verify"}
+  [1m[35mPhone Load (0.6ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/users/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/" for ::1 at 2016-04-27 16:48:06 -0700
+Processing by UsersController#index as HTML
+  [1m[36mPhone Load (1.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["id", 3], ["created_at", "2016-04-27 23:48:08.019293"], ["updated_at", "2016-04-27 23:48:08.019293"]]
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  Rendered users/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 2879ms (Views: 70.8ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/" for ::1 at 2016-04-27 16:49:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/index.html.erb within layouts/application (338.4ms)
+Completed 200 OK in 1668ms (Views: 448.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-27 16:49:56 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:49:56 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:49:56 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:49:56 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:49:56 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-27 16:49:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-27 16:49:57 -0700
+
+
+Started GET "/users/" for ::1 at 2016-04-27 16:50:03 -0700
+Processing by UsersController#index as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/index.html.erb within layouts/application (114.5ms)
+Completed 200 OK in 1087ms (Views: 198.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:50:04 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-04-27 16:50:04 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-04-27 16:50:04 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:50:04 -0700
+
+
+Started GET "/assets/api.self-525721903ff5d6d9b98b8fa74f1bb3e5df90dd5cc225fc6bd5000fdf0822a11a.js?body=1" for ::1 at 2016-04-27 16:50:04 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:50:04 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 16:50:04 -0700
