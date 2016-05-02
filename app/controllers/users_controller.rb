@@ -29,6 +29,7 @@ class UsersController < ApplicationController
      user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
     #  result = user_api["/v1/users/17659022.json"].put({:user =>{"first_name":"Floyd"}})
     result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"telephone":"#{@phone.number}"}}})
+    result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
 
     #  RestClient::Resource.new(USERNAME,PASSWORD).put('http://instantsignup.pixfizz.com/v1/users/2760630', {:user => {:custom => {:telephone => "123123"}.to_json}}) do |response, request, result, &block|
     #    if [301, 302, 307].include? response.code
