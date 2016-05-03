@@ -33,8 +33,8 @@ class Apps::TextyController < ApplicationController
   def update
 
     @phone = Phone.last
-    @vercodechange = @phone.vercode + "red"
-      if @vercodechange === params[:phone][:vercode]
+
+      if @phone.vercode === params[:phone][:vercode]
         redirect_to '/users/'
       else
         flash[:alert]="Ver code is invalid"
