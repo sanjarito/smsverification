@@ -9,6 +9,7 @@ class Apps::TextyController < ApplicationController
 
   def send_text
     @phone = Phone.create(phone_params)
+    @phone.vercode = rand(10000..100000).to_s
     @phone.send_sms(@phone.clean_number, @phone.vercode)
 
     if @phone.save && defined?(@phone.number)
