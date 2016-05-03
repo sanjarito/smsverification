@@ -1,23 +1,12 @@
 <div class="container">
   <div class="container" id="app-texty-title">
-    <h1>SMS!</h1>
+    <h1>Welcome</h1>
   </div>
-  <h1> opening text  </h1>
+  <h1>We are sending you a verification code to the following number: <%= @user[:custom][:telephone]%> </h1>
 
 
 
-  <div class="container" id="app-texty-form">
-    <%= form_for @phone, url: '/apps/texty/send_text' do |f| %>
-    <%= f.label :number, 'Enter Your Phone Number' %>
-    <%= f.telephone_field :number, class: 'form-control', placeholder: '###-###-####' %>
-    <!-- <%= f.label :vercode, 'Choose a 4 number PIN' %>
-    <%= f.password_field :vercode, class: 'form-control', placeholder: '############' %> -->
 
-
-    <br>
-    <%= f.submit 'Send Text', class: 'btn btn-primary' %>
-    <% end %>
-  </div>
 
   <div class="container navbar-fixed-bottom" id="app-texty-footer">
     <p>*please note that your phone number will not be saved, shared, or sold by this application nor any other party, it is only used for the purposes of this exercise</p>

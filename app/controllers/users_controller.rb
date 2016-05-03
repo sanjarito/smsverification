@@ -28,7 +28,8 @@ class UsersController < ApplicationController
 
      user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
     #  result = user_api["/v1/users/17659022.json"].put({:user =>{"first_name":"Floyd"}})
-    result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"telephone":"#{@phone.number}"}}})
+
+    # result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"telephone":"#{@phone.number}"}}})
     result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
 
     redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"

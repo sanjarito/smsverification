@@ -1,16 +1,37 @@
 class Apps::TextyController < ApplicationController
 
+  require 'rest_client'
+  require 'json'
+  require 'open-uri'
+
+  USERNAME = "Api@hotmail.com" # needed to access the APi
+  PASSWORD = "Api2000" # needed to access the APi
+  API_BASE_URL = "http://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
+  API_BASE_URL2 = "http://instantsignup.pixfizz.com/v1/users/" # base url of the API
+
   def index
+    # @phone = Phone.new
     @phone = Phone.new
+    @user = User.new
+    uri = "#{API_BASE_URL}.json" # specifying json format in the URl
+    uripost = "#{API_BASE_URL}"
+    rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
+    users = rest_resource.get
+    @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
+    @user.id = @users[-1][:id]
 
 
 
-  end
-
-  def send_text
-    @phone = Phone.create(phone_params)
+    uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
+    uripost = "#{API_BASE_URL}"
+    rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
+    user = rest_resource.get
+    @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+    @phone.number = @user[:custom][:telephone]
     @phone.vercode = rand(10000..100000).to_s
-    @phone.send_sms(@phone.clean_number, @phone.vercode)
+    @phone.send_sms(@phone.number,@phone.vercode)
+    @phone.save
+
 
     if @phone.save && defined?(@phone.number)
 
