@@ -9,8 +9,8 @@ class UsersController < ApplicationController
     API_BASE_URL = "http://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
 
     def index
-      # @phone = Phone.last
-      # @user = User.new
+      @phone = Phone.last
+      @user = User.last
       # uri = "#{API_BASE_URL}.json" # specifying json format in the URl
       # uripost = "#{API_BASE_URL}"
       # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
