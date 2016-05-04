@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
 
 
-
+    redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"
 
 
 end
