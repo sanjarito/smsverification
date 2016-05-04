@@ -19,7 +19,7 @@ class Apps::TextyController < ApplicationController
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
     @user.id = params[:user_id]
 
-
+  end
 #
 #     uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
 #     uripost = "#{API_BASE_URL}"
@@ -75,10 +75,10 @@ class Apps::TextyController < ApplicationController
 #
 #
 #
-#   private
+  private
+
+  def phone_params
+    params.require(:phone).permit(:number,:vercode)
+  end
 #
-#   def phone_params
-#     params.require(:phone).permit(:number,:vercode)
-#   end
-#
-# end
+end
