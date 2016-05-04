@@ -13,8 +13,7 @@ class Apps::TextyController < ApplicationController
     # @phone = Phone.new
     @phone = Phone.new
     @user = User.new
-    uri = "#{API_BASE_URL}.json" # specifying json format in the URl
-    uripost = "#{API_BASE_URL}"
+    uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
     rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     users = rest_resource.get
     @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
