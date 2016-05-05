@@ -11,13 +11,14 @@ class Apps::TextyController < ApplicationController
 
   def index
     # @phone = Phone.new
+    @users =
     @phone = Phone.new
     @user = User.new
     # uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
-    if exists?(params[:user_id]=>user_id)
+    if exists?(parms[:user_id]=>  Users.all
             redirect_to '/apps/texty/verify'
     else
             @user.id = params[:user_id]
