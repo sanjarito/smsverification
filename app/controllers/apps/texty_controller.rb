@@ -37,7 +37,7 @@ class Apps::TextyController < ApplicationController
             else
               render 'new'
             end
-
+end
   end
 
   def verify
@@ -73,5 +73,5 @@ class Apps::TextyController < ApplicationController
   def phone_params
     params.require(:phone).permit(:number,:vercode)
   end
-#
+
 end
