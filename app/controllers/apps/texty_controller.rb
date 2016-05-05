@@ -17,30 +17,56 @@ class Apps::TextyController < ApplicationController
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
+    if !User.exists?(@user.id)
     @user.id = params[:user_id]
     @user.save
-        uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
-        rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
-        user = rest_resource.get
-        @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
-        @phone.number = @user[:custom][:telephone]
-        if !Phone.exists?(@phone.vercode)
-        @phone.vercode = rand(10000..100000).to_s
-        @phone.send_sms(@phone.number,@phone.vercode)
-        @phone.save
+    uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
+    rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
+    user = rest_resource.get
+    @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+    @phone.number = @user[:custom][:telephone]
+    if !Phone.exists?(@phone.vercode)
+    @phone.vercode = rand(10000..100000).to_s
+    @phone.send_sms(@phone.number,@phone.vercode)
+    @phone.save
 
-            if @phone.save && defined?(@phone.number)
+        if @phone.save && defined?(@phone.number)
 
-                  redirect_to '/apps/texty/verify'
+              redirect_to '/apps/texty/verify'
 
 
-            else
-                  render 'new'
-            end
         else
-        redirect_to 'https://instantsignup.pixfizz.com/site'
-
+              render 'new'
         end
+    else
+    redirect_to 'https://instantsignup.pixfizz.com/site'
+
+    end
+    else
+      uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
+      rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
+      user = rest_resource.get
+      @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+      @phone.number = @user[:custom][:telephone]
+      if !Phone.exists?(@phone.vercode)
+      @phone.vercode = rand(10000..100000).to_s
+      @phone.send_sms(@phone.number,@phone.vercode)
+      @phone.save
+
+          if @phone.save && defined?(@phone.number)
+
+                redirect_to '/apps/texty/verify'
+
+
+          else
+                render 'new'
+          end
+      else
+      redirect_to 'https://instantsignup.pixfizz.com/site'
+
+      end
+    end
+
 end
 
   def verify
