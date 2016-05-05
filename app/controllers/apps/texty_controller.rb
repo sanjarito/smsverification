@@ -6,8 +6,8 @@ class Apps::TextyController < ApplicationController
 
   USERNAME = "Api@hotmail.com" # needed to access the APi
   PASSWORD = "Api2000" # needed to access the APi
-  API_BASE_URL = "http://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
-  API_BASE_URL2 = "http://instantsignup.pixfizz.com/v1/users/" # base url of the API
+  API_BASE_URL = "https://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
+  API_BASE_URL2 = "https://instantsignup.pixfizz.com/v1/users/" # base url of the API
 
   def index
     # @phone = Phone.new
@@ -26,7 +26,6 @@ class Apps::TextyController < ApplicationController
         @phone.number = @user[:custom][:telephone]
         if !Phone.exists?(@phone.vercode)
         @phone.vercode = rand(10000..100000).to_s
-
         @phone.send_sms(@phone.number,@phone.vercode)
         @phone.save
 
@@ -39,7 +38,7 @@ class Apps::TextyController < ApplicationController
                   render 'new'
             end
         else
-        redirect_to '/apps/texty/verify'
+        redirect_to 'https://instantsignup.pixfizz.com/site'
 
         end
 end
