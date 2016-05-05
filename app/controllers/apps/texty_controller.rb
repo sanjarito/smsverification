@@ -19,7 +19,7 @@ class Apps::TextyController < ApplicationController
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
-    if User.exists?
+    if User.exists? params[:user_id].to_i
 
             redirect_to '/apps/texty/update'
     else
