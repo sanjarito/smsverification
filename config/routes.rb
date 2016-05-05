@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'apps/texty#index'
+  put 'apps/texty' => 'texty#index'
 
   resources :users
   # get '/users' => 'users#index'
