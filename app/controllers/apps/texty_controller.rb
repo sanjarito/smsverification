@@ -11,16 +11,18 @@ class Apps::TextyController < ApplicationController
 
   def index
     # @phone = Phone.new
-    @users =
+
     @phone = Phone.new
     @user = User.new
     # uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
-    if exists?(parms[:user_id]=>  Users.all
+    if User.exists? params[:user_id].to_i
+
             redirect_to '/apps/texty/verify'
     else
+    end
             @user.id = params[:user_id]
             @user.save
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
@@ -32,21 +34,14 @@ class Apps::TextyController < ApplicationController
             @phone.vercode = rand(10000..100000).to_s
             @phone.send_sms(@phone.number,@phone.vercode)
             @phone.save
+            redirect_to "/apps/texty/verify"
 
-                if @phone.save && defined?(@phone.number)
-
-                      redirect_to '/apps/texty/verify'
-
-
-                else
-                      render 'new'
-                end
             else
-            redirect_to 'https://instantsignup.pixfizz.com/site'
+            redirect_to "https://instantsignup.pixfizz.com/site"
 
             end
-    end
-end
+
+  end
 
   def verify
 
