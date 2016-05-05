@@ -13,7 +13,8 @@ class Apps::TextyController < ApplicationController
     # @phone = Phone.new
 
     @phone = Phone.new
-  
+
+
     # uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
@@ -23,7 +24,7 @@ class Apps::TextyController < ApplicationController
             redirect_to '/apps/texty/verify'
     else
     end
-    @user = User.new
+            @user = User.new
             @user.id = params[:user_id]
             @user.save
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
