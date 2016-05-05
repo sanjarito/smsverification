@@ -24,22 +24,25 @@ class Apps::TextyController < ApplicationController
         user = rest_resource.get
         @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
         @phone.number = @user[:custom][:telephone]
-        if @phone.exists?(@phone.vercode)
+        if !Phone.exists?(@phone.vercode)
         @phone.vercode = rand(10000..100000).to_s
 
         @phone.send_sms(@phone.number,@phone.vercode)
         @phone.save
 
-        if @phone.save && defined?(@phone.number)
+            if @phone.save && defined?(@phone.number)
 
-              redirect_to '/apps/texty/verify'
+                  redirect_to '/apps/texty/verify'
 
 
             else
-              render 'new'
+                  render 'new'
             end
+        else
+        redirect_to '/apps/texty/verify'
+
+        end
 end
-  end
 
   def verify
 
