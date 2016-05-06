@@ -21,3 +21,16 @@
   <%= f.submit 'Verify', class: 'btn btn-primary'%>
   <% end %>
 </div>
+
+
+<div class="container" id="app-texty-form-verify-go">
+  <h1>Wrong phone number? Or resend sms?<h1>
+  <%= form_for @phone, url: '/apps/texty/send_text'  do |f| %>
+  <%= f.label :number, 'Enter your phone number' %>
+  <%= f.password_field :number, class: 'form-control', placeholder: '############' %>
+
+
+  <br>
+  <%= f.submit 'Verify', class: 'btn btn-primary'%>
+  <% end %>
+</div>
