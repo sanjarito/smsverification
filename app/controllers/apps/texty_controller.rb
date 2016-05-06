@@ -19,11 +19,7 @@ class Apps::TextyController < ApplicationController
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
-    if User.exists? params[:user_id].to_i
-
-            redirect_to '/apps/texty/update'
-    else
-    end
+  
             @user = User.new
             @user.id = params[:user_id]
             @user.save
@@ -44,6 +40,26 @@ class Apps::TextyController < ApplicationController
             end
 
   end
+
+def update_phone
+  @phone = Phone.last
+end
+
+  def send_text
+    @phone = Phone.update(phone_params)
+    @phone.send_sms(@phone.clean_number, @phone.vercode)
+
+    if @phone.save && defined?(@phone.number)
+
+
+      redirect_to '/apps/texty/verify'
+
+
+    else
+      render 'new'
+    end
+  end
+
 
   def verify
 

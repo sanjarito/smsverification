@@ -16,9 +16,9 @@ Rails.application.routes.draw do
   namespace :apps do
     resources :texty, :only => [:index]
 
+    get '/texty/send_text' => 'texty#update_phone'
+   patch '/texty/send_text' => 'texty#send_text'
 
-
-  post '/texty/send_text' => 'texty#send_text'
     get '/texty/verify' => 'texty#verify'
     patch '/texty/update' => 'texty#update'
 
