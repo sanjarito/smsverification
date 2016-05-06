@@ -4,7 +4,7 @@
 
   </div>
 
-<%= debug(params) if Rails.env.development? %>
+<%= "Your phone number is :" + @phone.number + "Your code: " + @phone.vercode%>
 
 </div>
 
@@ -21,6 +21,7 @@
   <%= f.submit 'Verify', class: 'btn btn-primary'%>
   <% end %>
 </div>
+
 
 
 <div class="container" id="app-texty-form-verify-go">

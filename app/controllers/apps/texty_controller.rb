@@ -19,7 +19,7 @@ class Apps::TextyController < ApplicationController
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
-  
+
             @user = User.new
             @user.id = params[:user_id]
             @user.save
@@ -47,7 +47,7 @@ end
 
   def send_text
     @phone = Phone.update(phone_params)
-    @phone.send_sms(@phone.clean_number, @phone.vercode)
+    @phone.send_sms(@phone.number)
 
     if @phone.save && defined?(@phone.number)
 
