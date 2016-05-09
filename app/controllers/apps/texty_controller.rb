@@ -29,8 +29,8 @@ class Apps::TextyController < ApplicationController
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
-          else
-            @user.last
+          elsif User.exists?
+            @user = User.find(params[:id])
           end
             @phone.number = @user[:custom][:telephone]
 
