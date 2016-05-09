@@ -19,6 +19,9 @@ class Apps::TextyController < ApplicationController
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
+            if !User.exists?
+            else
+
 
             @user = User.new
             @user.id = params[:user_id]
@@ -28,6 +31,7 @@ class Apps::TextyController < ApplicationController
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
             @phone.number = @user[:custom][:telephone]
+          end
             if !Phone.exists?(@phone.vercode)
             @phone.vercode = rand(10000..100000).to_s
             @phone.send_sms(@phone.number,@phone.vercode)
