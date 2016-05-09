@@ -22,8 +22,8 @@ class Apps::TextyController < ApplicationController
 
             @user = User.new
             if @user.id?
-              @user = User.find(params[:id])
-              @phone.number = @user[:custom][:telephone]
+              @user = User.last
+
               redirect_to "/apps/texty/verify"
             else
 
