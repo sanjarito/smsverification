@@ -27,13 +27,18 @@ class Apps::TextyController < ApplicationController
               redirect_to "/apps/texty/verify"
             elsif !@user.id?
 
-            @user.id = params[:user_id]
-            @phone.user_id = @user.id
-            @user.save
+
+
+
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+            @user.id = params[:user_id]
+              @phone.user_id = @user.id
+              @user.save
+
+            session[:current_user_id] = @user.id
           end
 
 
@@ -70,7 +75,7 @@ class Apps::TextyController < ApplicationController
 
 def update_phone
   # @phone = Phone.last
-  @phone = Phone.find(params[:user_id])
+
 end
 
 
@@ -100,6 +105,8 @@ end
     if @phone.save && defined?(@phone.number)
 
 
+
+
       redirect_to '/apps/texty/verify'
 
 
@@ -114,14 +121,15 @@ end
   def verify
 
     # @phone = Phone.last
-      @phone = Phone.find(params[:user_id])
+      # @phone = Phone.find(params[user_id])
+      @phone = Phone.find(@current_user_id)
 
 
   end
 
   def update
-
-    @phone = Phone.find(params[:user_id])
+    Phone.where(user_id: @@session)
+    # @phone = Phone.find(params[user_id])
     @user = User.last
 
 
@@ -145,6 +153,17 @@ end
   end
 
   private
+
+
+ # Finds the User with the ID stored in the session with the key
+ # :current_user_id This is a common way to handle user login in
+ # a Rails application; logging in sets the session value and
+ # logging out removes it.
+ def current_user
+   @_current_user ||= session[:current_user_id] &&
+     User.find_by(id: session[:current_user_id])
+ end
+
 
   def phone_params
     params.require(:phone).permit(:number,:vercode)
