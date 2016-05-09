@@ -25,7 +25,7 @@ class Apps::TextyController < ApplicationController
               @user = User.last
 
               redirect_to "/apps/texty/verify"
-            else
+            elsif !@user.id?
 
             @user.id = params[:user_id]
             @user.save
