@@ -28,6 +28,7 @@ class Apps::TextyController < ApplicationController
             elsif !@user.id?
 
             @user.id = params[:user_id]
+            @phone.user_id = @user.id
             @user.save
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
