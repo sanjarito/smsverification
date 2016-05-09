@@ -69,7 +69,8 @@ class Apps::TextyController < ApplicationController
   end
 
 def update_phone
-  @phone = Phone.last
+  # @phone = Phone.last
+  @phone = Phone.find(params[:user_id])
 end
 
 
@@ -112,7 +113,8 @@ end
 
   def verify
 
-    @phone = Phone.last
+    # @phone = Phone.last
+      @phone = Phone.find(params[:user_id])
 
 
   end
