@@ -45,9 +45,26 @@ def update_phone
   @phone = Phone.last
 end
 
+
+# def send_text
+#    @phone = Phone.create(phone_params)
+#    @phone.send_sms(@phone.clean_number, @phone.vercode)
+#
+#    if @phone.save && defined?(@phone.number)
+#
+#
+#      redirect_to '/apps/texty/verify'
+#
+#
+#    else
+#      render 'new'
+#    end
+#  end
+
+
   def send_text
-    @phone = Phone.update(phone_params)
-    @phone.vercode = rand(10000..100000).to_s
+    @phone = Phone.last
+    @phone = Phone.create(phone_params)
     @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
 
@@ -61,6 +78,8 @@ end
       render 'new'
     end
   end
+
+
 
 
   def verify

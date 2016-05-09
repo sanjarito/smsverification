@@ -9,6 +9,8 @@
      <%= form_for @phone, url: '/apps/texty/send_text' do |f| %>
      <%= f.label :number, 'Enter Your Phone Number' %>
      <%= f.telephone_field :number, class: 'form-control', placeholder: '###-###-####' %>
+     <%= f.label :vercode, 'Choose a 4 number PIN' %>
+   <%= f.password_field :vercode, class: 'form-control', placeholder: '############' %>
 
 
 
@@ -17,7 +19,7 @@
      <% end %>
    </div>
 
-  
+
 
   <div class="container navbar-fixed-bottom" id="app-texty-footer">
     <p>*please note that your phone number will not be saved, shared, or sold by this application nor any other party, it is only used for the purposes of this exercise</p>
