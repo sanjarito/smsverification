@@ -33,9 +33,10 @@ class Apps::TextyController < ApplicationController
            rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
            user = rest_resource.get
            @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+           session[:current_user_id] = @user.id
          end
 
-           session[:current_user_id] = @user.id
+           
            @phone.number = @user[:custom][:telephone]
 
            if !Phone.exists?(@phone.vercode)
@@ -51,7 +52,7 @@ class Apps::TextyController < ApplicationController
 
  end
 
-              
+
 
 
 
