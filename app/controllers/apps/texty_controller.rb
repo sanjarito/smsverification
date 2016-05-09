@@ -21,7 +21,8 @@ class Apps::TextyController < ApplicationController
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
 
 
-            if !User.exists?
+            if User.find(params[:id]).exists?
+            else
             @user = User.new
             @user.id = params[:user_id]
             @user.save
@@ -29,9 +30,9 @@ class Apps::TextyController < ApplicationController
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
-          elsif User.find(params[:id]).exists?
-            
           end
+
+          
             @phone.number = @user[:custom][:telephone]
 
             if !Phone.exists?(@phone.vercode)
