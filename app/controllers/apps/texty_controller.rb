@@ -22,8 +22,9 @@ class Apps::TextyController < ApplicationController
 
             @user = User.new
             if @user.id?
+              redirect_to "/apps/texty/verify"
             else
-            
+
             @user.id = params[:user_id]
             @user.save
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
