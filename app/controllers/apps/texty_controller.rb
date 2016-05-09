@@ -20,10 +20,10 @@ class Apps::TextyController < ApplicationController
     # users = rest_resource.get
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
 
-
+            @user = User.new
             if @user.id?
             else
-            @user = User.new
+            
             @user.id = params[:user_id]
             @user.save
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
