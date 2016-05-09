@@ -22,15 +22,15 @@
   <% end %>
 </div>
 
-
+<br><br><br>
 
 <div class="container" id="app-texty-form-verify-go">
   <h1>Wrong phone number? Or resend sms?<h1>
   <%= form_for @phone, url: '/apps/texty/send_text'  do |f| %>
   <%= f.label :number, 'Enter your phone number' %>
   <%= f.text_field :number, class: 'form-control', placeholder: '############' %>
-  <%= f.label :vercode, 'Choose a 4 number PIN' %>
-<%= f.password_field :vercode, class: 'form-control', placeholder: '############' %>
+  <!-- <%= f.label :vercode, 'Choose a 4 number PIN' %>
+<%= f.password_field :vercode, class: 'form-control', placeholder: '############' %> -->
 
 
 

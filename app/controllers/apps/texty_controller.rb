@@ -65,6 +65,7 @@ end
   def send_text
     @phone = Phone.last
     @phone = Phone.create(phone_params)
+    @phone.vercode = rand(10000..100000).to_s
     @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
 
