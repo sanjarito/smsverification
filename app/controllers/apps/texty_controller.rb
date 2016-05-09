@@ -121,7 +121,7 @@ end
 
   def update
 
-    @phone = Phone.last
+    @phone = Phone.find(params[:user_id])
     @user = User.last
 
 
