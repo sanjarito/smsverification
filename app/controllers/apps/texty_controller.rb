@@ -36,9 +36,13 @@ class Apps::TextyController < ApplicationController
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
             @user.id = params[:user_id]
               @phone.user_id = @user.id
-              @user.save
+              # session[:current_phone_id] = @phone.user_id
 
-            session[:current_user_id] = @user.id
+
+              @user.save
+               session[:current_user_id] = @user.id
+
+
           end
 
 
@@ -120,15 +124,15 @@ end
 
   def verify
 
-    # @phone = Phone.last
-      # @phone = Phone.find(params[user_id])
-      @phone = Phone.find(@current_user_id)
+current_user = User.find_by_id(session[:current_user_id])
+      @phone = Phone.find_by_id(current_user)
+      
 
 
   end
 
   def update
-    Phone.where(user_id: @@session)
+
     # @phone = Phone.find(params[user_id])
     @user = User.last
 
@@ -159,14 +163,14 @@ end
  # :current_user_id This is a common way to handle user login in
  # a Rails application; logging in sets the session value and
  # logging out removes it.
- def current_user
-   @_current_user ||= session[:current_user_id] &&
-     User.find_by(id: session[:current_user_id])
+ def current_phone
+   @_current_phone ||= session[:current_phone_id] &&
+     Phone.find_by(user_id: session[:current_phone_id])
  end
 
 
   def phone_params
-    params.require(:phone).permit(:number,:vercode)
+    params.require(:phone).permit(:number,:vercode,:user_id)
   end
 
 end
