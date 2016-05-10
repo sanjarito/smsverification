@@ -88,7 +88,7 @@ def update_phone
         else
           render 'new'
         end
-      
+
 
 end
 
@@ -113,7 +113,11 @@ end
   end
 
 
-
+  def forgot
+    @phone = Phone.find_by_user_id(session[:current_user_id])
+       @user = User.last
+  
+  end
 
   def verify
 
