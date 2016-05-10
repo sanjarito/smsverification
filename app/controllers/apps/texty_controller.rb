@@ -114,8 +114,8 @@ end
 
 
   def verify
-puts session[:user]
- @phone = Phone.find_by :user_id(123123)
+
+ @phone = Phone.find_by (user_id: 123123)
     @user = User.last
 
 
