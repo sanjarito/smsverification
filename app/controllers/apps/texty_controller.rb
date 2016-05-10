@@ -71,38 +71,36 @@ class Apps::TextyController < ApplicationController
   #    end
   # end
 
-  # @phone.vercode = rand(10000..100000).to_s
-  # @phone.send_sms(@phone.number)
+def update_phone
+    @phone = Phone.find_by_user_id(session[:current_user_id])
+    @phone = Phone.update(phone_params)
+    @phone.send_sms(@phone.number,@phone.vercode)
+    @phone.save
 
-# def update_phone
-#     @phone = Phone.find_by_user_id(session[:current_user_id])
-#     @phone = Phone.update(phone_params)
-#     @phone.send_sms(@phone.number,@phone.vercode)
-#     @phone.save
-#
-#
-#         if @phone.save && defined?(@phone.number)
-#
-#
-#           redirect_to '/apps/texty/verify'
-#
-#
-#         else
-#           render 'new'
-#         end
-#
-#
-# end
+
+        if @phone.save && defined?(@phone.number)
+
+
+          redirect_to '/apps/texty/verify'
+
+
+        else
+          render 'new'
+        end
+
+
+end
 
 
 
   def send_text
     @phone = Phone.find_by_user_id(session[:user])
-    @phone = Phone.update(params[:phone][:number])
-
+    @phone = Phone.create(phone_params)
+    @phone.vercode = rand(10000..100000).to_s
+    @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
 
-
+    if @phone.save && defined?(@phone.number)
 
 
       redirect_to '/apps/texty/verify'
@@ -147,4 +145,15 @@ class Apps::TextyController < ApplicationController
   def authcallback
     @phone = Phone.last
 
+
+
+
   end
+
+  private
+
+  def phone_params
+    params.require(:phone).permit(:number,:vercode)
+  end
+
+end
