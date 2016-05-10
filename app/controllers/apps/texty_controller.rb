@@ -16,7 +16,7 @@ class Apps::TextyController < ApplicationController
 
     @phone = Phone.new
 
-(set) session[:my_name] = "12343"
+
     # uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
     # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
     # users = rest_resource.get
@@ -31,6 +31,7 @@ class Apps::TextyController < ApplicationController
 
             @user.id = params[:user_id]
             @user.save
+            session[:user] = @user
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
@@ -113,8 +114,8 @@ end
 
 
   def verify
-
- @phone = Phone.find(session[:my_name])
+puts session[:user]
+ @phone = Phone.find(session[:user])
     @user = User.last
 
 
