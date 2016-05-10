@@ -10,54 +10,46 @@ class Apps::TextyController < ApplicationController
   API_BASE_URL2 = "https://instantsignup.pixfizz.com/v1/users/" # base url of the API
 
   def index
-   # @phone = Phone.new
+    # @phone = Phone.new
 
-   @phone = Phone.new
-
-
-   # uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
-   # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
-   # users = rest_resource.get
-   # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
-
-           @user = User.new
-           if @user.id?
-             @user = User.last
-
-             redirect_to "/apps/texty/verify"
-           elsif !@user.id?
-
-           @user.id = params[:user_id]
-           @user.save
-           uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
-           rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
-           user = rest_resource.get
-           @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
-           session[:current_user] = @user.id
-         end
+    @phone = Phone.new
 
 
-           @phone.number = @user[:custom][:telephone]
+    # uri = "#{API_BASE_URL}.json?pages=10" # specifying json format in the URl
+    # rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
+    # users = rest_resource.get
+    # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
 
-           if !Phone.exists?(@phone.vercode)
-           @phone.vercode = rand(10000..100000).to_s
-           @phone.send_sms(@phone.number,@phone.vercode)
-           @phone.save
-           redirect_to "/apps/texty/verify"
+            @user = User.new
+            if @user.id?
+              @user = User.last
 
-           else
-           redirect_to "https://instantsignup.pixfizz.com/site"
+              redirect_to "/apps/texty/verify"
+            elsif !@user.id?
 
-           end
-
- end
-
-
-
-
+            @user.id = params[:user_id]
+            @user.save
+            uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
+            rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
+            user = rest_resource.get
+            @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+          end
 
 
+            @phone.number = @user[:custom][:telephone]
 
+            if !Phone.exists?(@phone.vercode)
+            @phone.vercode = rand(10000..100000).to_s
+            @phone.send_sms(@phone.number,@phone.vercode)
+            @phone.save
+            redirect_to "/apps/texty/verify"
+
+            else
+            redirect_to "https://instantsignup.pixfizz.com/site"
+
+            end
+
+  end
 
   def show
      @user = User.find(params[:id])
@@ -76,8 +68,7 @@ class Apps::TextyController < ApplicationController
   end
 
 def update_phone
-  # @phone = Phone.last
-
+  @phone = Phone.last
 end
 
 
@@ -107,8 +98,6 @@ end
     if @phone.save && defined?(@phone.number)
 
 
-
-
       redirect_to '/apps/texty/verify'
 
 
@@ -122,20 +111,18 @@ end
 
   def verify
 
-current_user = User.find_by_id(session[:current_user_id])
-      @phone = Phone.find_by_id(current_user)
-
+    @phone = Phone.last
 
 
   end
 
   def update
 
-    # @phone = Phone.find(params[user_id])
+    @phone = Phone.last
     @user = User.last
 
 
-      if @phone.vercode === params[:phone][:vercode]
+      if @phone.vercode === params[:phone][:vercode] && @phone.user_id == @user.id
         user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
         result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
         redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"
@@ -156,19 +143,8 @@ current_user = User.find_by_id(session[:current_user_id])
 
   private
 
-
- # Finds the User with the ID stored in the session with the key
- # :current_user_id This is a common way to handle user login in
- # a Rails application; logging in sets the session value and
- # logging out removes it.
- def current_phone
-   @_current_phone ||= session[:current_phone_id] &&
-     Phone.find_by(user_id: session[:current_phone_id])
- end
-
-
   def phone_params
-    params.require(:phone).permit(:number,:vercode,:user_id)
+    params.require(:phone).permit(:number,:vercode)
   end
 
 end

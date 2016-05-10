@@ -34146,3 +34146,235 @@ DETAIL:  Key (id)=(18045834) already exists.
   Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (127.5ms)
+
+
+Started GET "/?user_id=18046145" for ::1 at 2016-05-09 17:06:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (4.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  Parameters: {"user_id"=>"18046145"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "users" ("id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 18046145], ["created_at", "2016-05-10 00:06:10.286638"], ["updated_at", "2016-05-10 00:06:10.286638"]]
+  [1m[35m (11.8ms)[0m  COMMIT
+  [1m[36mPhone Load (1.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "phones" ("number", "vercode", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["number", "3123913609"], ["vercode", "19283"], ["created_at", "2016-05-10 00:06:12.574873"], ["updated_at", "2016-05-10 00:06:12.574873"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 2365ms (ActiveRecord: 33.0ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:06:12 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `number' for nil:NilClass):
+    4: 
+    5:   </div>
+    6: 
+    7: <%= "Your phone number is :" + @phone.number + "Your code: " + @phone.vercode%>
+    8: 
+    9: </div>
+   10: 
+  app/views/apps/texty/verify.html.erb:7:in `_app_views_apps_texty_verify_html_erb___3873374135474011198_70099514416260'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (604.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (705.6ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:08:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#verify as HTML
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/apps/texty_controller.rb:126:in `verify'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (621.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (709.9ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:09:47 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (1.0ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 573ms (Views: 541.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:09:48 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:09:48 -0700
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-05-09 17:09:48 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:09:48 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-05-09 17:09:48 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:09:48 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:11:55 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.5ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (64.9ms)
+Completed 200 OK in 138ms (Views: 102.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:11:56 -0700
+
+
+
+
+Started GET "/assets/theme.self-6ecc157ff72cb5821e2ef0adadb07fc0bce64a155e751d9cdfcd3931f4a36edd.css?body=1" for ::1 at 2016-05-09 17:11:56 -0700
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:11:56 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:11:56 -0700
+
+
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 17:11:56 -0700
+
+
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for ::1 at 2016-05-09 17:11:56 -0700
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-05-09 17:12:02 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YcdURblQf5sxfoac23HhVcr6xwPYqDWzBbNyAgCCYBbT28Et4H5m8TqYrdeWKts5eFN/hvm8UlDEdgW5cQfYoQ==", "phone"=>{"vercode"=>"324"}, "commit"=>"Verify"}
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 65ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:12:02 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 272ms (Views: 270.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-05-09 17:12:05 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jr3A0jrd1v6Swrr1voK+11TgvyxoLvAh7Yt2QB/odHA8oVW6Y/PPlJkkkb7z2YS75kkHqUk6l8IsTgH7bm3Mxw==", "phone"=>{"vercode"=>"1234red"}, "commit"=>"Verify"}
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:12:05 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-05-09 17:12:25 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6GjCnch4Cpw6fNno71km8+z1AeqZ87UGn8faQHNBV+hadFf1kVYT9jGa8qOiAhyfXly5b7jn0uVeAq37AsTvXw==", "phone"=>{"vercode"=>"19283"}, "commit"=>"Verify"}
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:12:25 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-05-09 17:12:31 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Ea6C8i9Mf67j1DDkKpApeqNIqHdIUy43oUOHjRUF3xKWi9jkZMolLBpe4jd8XrJWCSaJPw1K1sfQHmlRdGvyw==", "phone"=>{"vercode"=>"1234red"}, "commit"=>"Verify"}
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:12:31 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/apps/texty/update" for ::1 at 2016-05-09 17:12:39 -0700
+Processing by Apps::TextyController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aann+wD1qXTDL0d8zAZ5c3Weh8poPxCZAzOCjPqS9IDbtXKTWduwHsjJbDeBXUMfxzc/T0krd3rC9vU3ixdMNw==", "phone"=>{"vercode"=>"19283"}, "commit"=>"Verify"}
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:12:39 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (2.7ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-09 17:14:30 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+     6: 
+     7: <%= "Your phone number is :" + @phone.number + "Your code: " + @phone.vercode%>
+     8: 
+     9: <%= "Your phone user_id is :" + @phone.user_id + "Your user_id is: " + @user.id%>
+    10: 
+    11: </div>
+    12: 
+  app/views/apps/texty/verify.html.erb:9:in `+'
+  app/views/apps/texty/verify.html.erb:9:in `_app_views_apps_texty_verify_html_erb___3873374135474011198_70099528929160'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (89.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (175.3ms)
