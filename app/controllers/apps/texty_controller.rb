@@ -37,7 +37,7 @@ class Apps::TextyController < ApplicationController
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
             @phone.user_id = params[:user_id]
-            @user.id = session[:current_user_id]
+            
           end
 
             @phone.number = @user[:custom][:telephone]
