@@ -88,7 +88,7 @@ def update_phone
         else
           render 'new'
         end
-      end
+      
 
 end
 
