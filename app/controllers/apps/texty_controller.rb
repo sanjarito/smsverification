@@ -148,7 +148,3 @@ class Apps::TextyController < ApplicationController
     @phone = Phone.last
 
   end
-
-
-
-end
