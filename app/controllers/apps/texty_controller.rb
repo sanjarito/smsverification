@@ -72,7 +72,7 @@ class Apps::TextyController < ApplicationController
   # end
 
 def update_phone
-    @phone = Phone.find_by_user_id(session[:current_user_id])
+    @phone = Phone.find_by_user_id(session[:user])
     @phone = Phone.update(phone_params)
     @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
