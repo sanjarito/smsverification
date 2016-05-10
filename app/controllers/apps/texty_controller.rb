@@ -35,7 +35,7 @@ class Apps::TextyController < ApplicationController
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
           end
 
-            @phone.user_id = @user.id
+            @phone.user_id = params[:user_id]
             @phone.number = @user[:custom][:telephone]
 
             if !Phone.exists?(@phone.vercode)
