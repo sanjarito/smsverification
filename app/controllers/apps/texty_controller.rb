@@ -37,7 +37,7 @@ class Apps::TextyController < ApplicationController
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
             @phone.user_id = params[:user_id]
-            session[:current_user_id] = @user.id
+            @user.id = session[:current_user_id]
           end
 
             @phone.number = @user[:custom][:telephone]
@@ -115,7 +115,7 @@ end
 
   def verify
 
- @phone = Phone.find_by_user_id(18046924)
+ @phone = Phone.find_by_user_id(session[:current_user_id])
     @user = User.last
 
 
