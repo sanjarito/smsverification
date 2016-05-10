@@ -1,5 +1,5 @@
 class Apps::TextyController < ApplicationController
-  before_filter :index
+
 
 
   require 'rest_client'
@@ -36,7 +36,7 @@ class Apps::TextyController < ApplicationController
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
             @phone.user_id = params[:user_id]
-            @testvar = @phone.user_id
+            
           end
 
             @phone.number = @user[:custom][:telephone]
@@ -114,7 +114,7 @@ end
 
   def verify
 
-    
+
     @phone = Phone.last
     @user = User.last
 
