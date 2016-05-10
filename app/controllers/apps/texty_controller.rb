@@ -1,4 +1,6 @@
 class Apps::TextyController < ApplicationController
+  before_filter :index
+
 
   require 'rest_client'
   require 'json'
@@ -111,7 +113,7 @@ end
 
   def verify
 
-    @phone = Phone.last
+    @phone = @phone.user_id
     @user = User.last
 
 
