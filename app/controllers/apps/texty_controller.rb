@@ -98,11 +98,11 @@ end
 
   def send_text
     @phone = Phone.find_by_user_id(session[:user])
-    @phone = Phone.update(phone_params)
+    @phone = Phone.update(params[:phone][:phone])
 
     @phone.save
 
-    if @phone.save 
+    if @phone.save
 
 
       redirect_to '/apps/texty/verify'
