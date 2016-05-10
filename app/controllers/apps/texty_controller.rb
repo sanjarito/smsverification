@@ -114,8 +114,8 @@ end
 
   def verify
 
-
-    @phone = Phone.last
+ @phone = Phone.find(session[:current_user_id])
+    
     @user = User.last
 
 
