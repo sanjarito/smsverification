@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
    get '/texty/forgot' => 'texty#forgot'
    get '/texty/update_phone' => 'texty#update_phone'
+   patch '/texty/update_phone' => 'texty#update_phone'
 
     get '/texty/verify' => 'texty#verify'
     patch '/texty/update' => 'texty#update'
