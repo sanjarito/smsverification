@@ -96,8 +96,7 @@ end
   def send_text
     @phone = Phone.find_by_user_id(session[:user])
     @phone = Phone.update(phone_params)
-    # @phone.vercode = rand(10000..100000).to_s
-    # @phone.send_sms(@phone.number)
+
     @phone.save
 
     if @phone.save && defined?(@phone.number)
