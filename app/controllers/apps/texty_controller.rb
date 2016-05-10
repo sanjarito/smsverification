@@ -73,9 +73,9 @@ class Apps::TextyController < ApplicationController
 
 def update_phone
     @phone = Phone.find_by_user_id(session[:user])
-    @phone = Phone.update(phone_params)
-    @phone.send_sms(@phone.number,@phone.vercode)
+    @phone.update(:number => '2222222')
     @phone.save
+    # @phone.send_sms(@phone.number,@phone.vercode)
 
 
         if @phone.save && defined?(@phone.number)
@@ -150,10 +150,5 @@ end
 
   end
 
-  private
-
-  def phone_params
-    params.require(:phone).permit(:number,:vercode)
-  end
 
 end
