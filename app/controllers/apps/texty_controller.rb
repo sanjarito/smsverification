@@ -115,7 +115,7 @@ end
 
   def verify
 
- @phone = Phone.find_by (user_id: '123123')
+ @phone = Phone.find_by_id(123123)
     @user = User.last
 
 
