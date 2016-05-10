@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'apps/texty#index'
-  
+
 
   resources :users
   # get '/users' => 'users#index'
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
     get '/texty/send_text' => 'texty#update_phone'
    patch '/texty/send_text' => 'texty#send_text'
+
+   patch '/texty/update_phone' => 'texty#update_phone'
 
     get '/texty/verify' => 'texty#verify'
     patch '/texty/update' => 'texty#update'
