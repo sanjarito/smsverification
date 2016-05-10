@@ -120,7 +120,7 @@ end
 
   def verify
 
- @phone = Phone.find_by_user_id(session[:current_user_id])
+ @phone = Phone.find_by_user_id(session[:user])
     @user = User.last
 
 
