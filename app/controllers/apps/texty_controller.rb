@@ -98,7 +98,7 @@ end
 
   def send_text
     @phone = Phone.find_by_user_id(session[:user])
-    @phone = Phone.update(params[:phone][:phone])
+    @phone = Phone.update(params[:phone][:number])
 
     @phone.save
 
@@ -155,7 +155,7 @@ end
   private
 
   def phone_params
-    params.require(:phone).permit(:number,:vercode)
+    params.require(:phone).permit(:number,:vercode,:user_id)
   end
 
 end

@@ -29,7 +29,7 @@
 <div class="container" id="app-texty-form-verify-go">
   <h1>Wrong phone number? Or resend sms?<h1>
 
-  <%= form_for @phone, url: '/apps/texty/send_text'  do |f| %>
+  <%= form_for @phone, url: '/apps/texty/send_text', method: :patch  do |f| %>
   <%= f.label :number, 'Enter your phone number' %>
   <%= f.text_field :number, class: 'form-control', placeholder: '############' %>
 
