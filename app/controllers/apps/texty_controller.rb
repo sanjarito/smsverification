@@ -72,7 +72,7 @@ class Apps::TextyController < ApplicationController
   # end
 
 def update_phone
-  @phone = Phone.last
+    @phone = Phone.find_by_user_id(session[:current_user_id])
 end
 
 
