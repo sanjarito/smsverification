@@ -115,7 +115,7 @@ end
 
   def verify
 puts session[:user]
- @phone = Phone.find(session[:user])
+ @phone = Phone.find(123123)
     @user = User.last
 
 
