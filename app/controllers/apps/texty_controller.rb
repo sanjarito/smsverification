@@ -33,9 +33,9 @@ class Apps::TextyController < ApplicationController
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
+            @phone.user_id = params[:user_id]
           end
 
-            @phone.user_id = params[:user_id]
             @phone.number = @user[:custom][:telephone]
 
             if !Phone.exists?(@phone.vercode)
