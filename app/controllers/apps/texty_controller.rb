@@ -108,7 +108,7 @@ end
 
   def update
 
-    @phone = Phone.last
+    @phone = Phone.find_by_user_id(session[:current_user_id])
     @user = User.last
 
 
