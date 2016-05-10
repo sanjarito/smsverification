@@ -147,15 +147,8 @@ class Apps::TextyController < ApplicationController
   def authcallback
     @phone = Phone.last
 
-
-
-
   end
 
-  # private
 
-  # def phone_params
-  #   params.require(:phone).permit(:number,:vercode,:user_id)
-  # end
 
 end
