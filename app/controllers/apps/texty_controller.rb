@@ -112,6 +112,7 @@ end
   def verify
 
     @phone = Phone.last
+    @user = User.last
 
 
   end
