@@ -75,7 +75,7 @@ def update_phone
     @phone = Phone.find_by_user_id(session[:user])
     @phone.update(:number => params[:phone][:number])
     @phone.save
-    # @phone.send_sms(@phone.number,@phone.vercode)
+    @phone.send_sms(@phone.number,@phone.vercode)
 
 
         if @phone.save && defined?(@phone.number)
