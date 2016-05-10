@@ -31,7 +31,7 @@ class Apps::TextyController < ApplicationController
 
             @user.id = params[:user_id]
             @user.save
-            session[:user] = @user
+            session[:user] = params[:user_id]
             uri2 = "#{API_BASE_URL2}#{@user.id}.json" # specifying json format in the URl
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
