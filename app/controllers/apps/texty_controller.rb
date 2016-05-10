@@ -123,7 +123,7 @@ end
     @user = User.last
 
 
-      if @phone.vercode === params[:phone][:vercode] && @phone.user_id == @user.id
+      if @phone.vercode === params[:phone][:vercode]
         user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
         result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
         redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"
