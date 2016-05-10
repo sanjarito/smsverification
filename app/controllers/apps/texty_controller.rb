@@ -121,16 +121,15 @@ end
   def verify
 
  @phone = Phone.find_by_user_id(session[:user])
-    @user = User.last
+    @user = User.find_by_id(session[:user])
 
 
   end
 
   def update
 
-    @phone = Phone.find_by_user_id(session[:current_user_id])
-    @user = User.last
-
+    @phone = Phone.find_by_user_id(session[:user])
+       @user = User.find_by_id(session[:user])
 
       if @phone.vercode === params[:phone][:vercode]
         user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
