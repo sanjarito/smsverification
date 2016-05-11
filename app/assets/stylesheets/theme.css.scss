@@ -14,8 +14,9 @@ $brand-language: #B01302;
 
 
 .jumbotron {
+  font-family: 'Fira Sans';
   background: $brand-primary;
-  color: red;
+  color: white;
   padding-bottom: 80px;
 
   .btn-primary {
