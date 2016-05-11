@@ -7,7 +7,7 @@
 </div>
 
 
-
+<div class="container">
 
 <div class="container" id="app-texty-form-verify-go">
   <%= form_for @phone, url: '/apps/texty/update'  do |f| %>
@@ -23,6 +23,11 @@
 <br><br><br>
 
 
-<div class="container" id="app-texty-form-verify-go">
-  <h2> Wrong phone number or need us to resend verification code? <%= button_to "Get vercode", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%><h2>
+<div class="container" id="app-texty-form-verify-go2">
+   Wrong phone number? <%= button_to "Correct", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
+</div>
+
+<div class="container" id="app-texty-form-verify-go3">
+   Did not get code? <%= button_to "Resend Sms", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
+</div>
 </div>
