@@ -1,6 +1,18 @@
 $brand-primary: #532F8C;
 $brand-language: #B01302;
 
+@font-face{
+    font-family: 'Fira Sans';
+    src: url("eot/FiraSans-Light.eot");
+    src: local("Fira Sans Light"),
+         url("eot/FiraSans-Light.eot") format("embedded-opentype"),
+         url("woff/FiraSans-Light.woff") format("woff"),
+         url("ttf/FiraSans-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
 .jumbotron {
   background: $brand-primary;
   color: white;
@@ -39,4 +51,3 @@ $brand-language: #B01302;
   }
 
 }
-
