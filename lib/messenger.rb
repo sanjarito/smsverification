@@ -24,7 +24,7 @@ module Messenger
         :from => from,
         :to => numero,
 
-        :body =>  ' Thanks for verifying your phone number, your code is  ' + hello + "                          " + "~The Pixfizz team~"
+        :body =>  ' Thanks for verifying your phone number, your code is  ' + hello + "                                                " + "~The Pixfizz team~"
         )
 
     end
