@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     get '/texty/authcallback' => 'texty#authcallback'
 
 
-
+    get "*path", to: redirect('/texty/update_phone')
 
   end
 
