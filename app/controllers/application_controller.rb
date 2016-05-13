@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
       redirect_to '/apps/texty/update_phone'
     end
-  
+  end
 
   protect_from_forgery with: :exception
 end
