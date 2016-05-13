@@ -4,18 +4,18 @@ class ApplicationController < ActionController::Base
 
 
   # custom 404
-  unless Rails.application.config.consider_all_requests_local
-    rescue_from ActiveRecord::RecordNotFound,
-                ActionController::RoutingError,
-                ActionController::UnknownController,
-                AbstractController::ActionNotFound,
-                ActionController::MethodNotAllowed do |exception|
-
-      # Put loggers here, if desired.
-
-      redirect_to '/apps/texty/update_phone'
-    end
-  end
+  # unless Rails.application.config.consider_all_requests_local
+  #   rescue_from ActiveRecord::RecordNotFound,
+  #               ActionController::RoutingError,
+  #               ActionController::UnknownController,
+  #               AbstractController::ActionNotFound,
+  #               ActionController::MethodNotAllowed do |exception|
+  #
+  #     # Put loggers here, if desired.
+  #
+  #     redirect_to '/apps/texty/update_phone'
+  #   end
+  # end
 
   protect_from_forgery with: :exception
 end
