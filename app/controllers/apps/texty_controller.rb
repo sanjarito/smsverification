@@ -24,7 +24,7 @@ class Apps::TextyController < ApplicationController
 
             @user = User.new
             if @user.id?
-               @user = User.find_by_id(session[:user])
+              @user = User.last
 
               redirect_to "/apps/texty/verify"
             elsif !@user.id?
@@ -37,7 +37,6 @@ class Apps::TextyController < ApplicationController
             rest_resource = RestClient::Resource.new(uri2, USERNAME, PASSWORD)
             user = rest_resource.get
             @user = JSON.parse(user, :symbolize_names => true) # we will convert the return
-            @phone.save
 
           end
 
@@ -45,9 +44,8 @@ class Apps::TextyController < ApplicationController
 
             if !Phone.exists?(@phone.vercode)
             @phone.vercode = rand(10000..100000).to_s
-            @phone.save
             @phone.send_sms(@phone.number,@phone.vercode)
-
+            @phone.save
             redirect_to "/apps/texty/verify"
 
             else
@@ -99,9 +97,8 @@ end
     @phone = Phone.find_by_user_id(session[:user])
     @phone = Phone.create(phone_params)
     @phone.vercode = rand(10000..100000).to_s
-    @phone.save
     @phone.send_sms(@phone.number,@phone.vercode)
-
+    @phone.save
 
     if @phone.save && defined?(@phone.number)
 
@@ -116,8 +113,8 @@ end
 
 
   def forgot
-    @phone = Phone.find_by_user_id(session[:user])
-       @user = User.find_by_id(session[:user])
+    @phone = Phone.find_by_user_id(session[:current_user_id])
+       @user = User.last
 
   end
 
