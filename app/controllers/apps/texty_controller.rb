@@ -128,7 +128,7 @@ end
 
 
     @phone.save
-       @user.save
+       
 
   end
 
