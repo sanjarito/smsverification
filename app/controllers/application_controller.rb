@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     rescue_from ActiveRecord::RecordNotFound,
                 ActionController::RoutingError,
                 ActionController::UnknownController,
-                ActionController::UnknownAction,
+                AbstractController::ActionNotFound,
                 ActionController::MethodNotAllowed do |exception|
 
       # Put loggers here, if desired.
