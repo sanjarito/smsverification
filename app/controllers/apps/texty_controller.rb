@@ -44,8 +44,9 @@ class Apps::TextyController < ApplicationController
 
             if !Phone.exists?(@phone.vercode)
             @phone.vercode = rand(10000..100000).to_s
-            @phone.send_sms(@phone.number,@phone.vercode)
             @phone.save
+            @phone.send_sms(@phone.number,@phone.vercode)
+            
             redirect_to "/apps/texty/verify"
 
             else
