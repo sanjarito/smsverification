@@ -46,7 +46,7 @@ class Apps::TextyController < ApplicationController
             @phone.vercode = rand(10000..100000).to_s
             @phone.save
             @phone.send_sms(@phone.number,@phone.vercode)
-            
+
             redirect_to "/apps/texty/verify"
 
             else
@@ -114,7 +114,7 @@ end
 
 
   def forgot
-    @phone = Phone.find_by_user_id(session[:current_user_id])
+    @phone = Phone.find_by_user_id(session[:user])
        @user = User.last
 
   end
