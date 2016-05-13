@@ -1,8 +1,8 @@
 <div class="jumbotron text-center">
-  <div class="container">
+  
  <h1> Thanks! Your code has been sent to <%= @phone.number %>  </h1>
 
-  </div>
+
 
 </div>
 
@@ -23,11 +23,9 @@
 <br><br><br>
 
 
-<div class="container fade" id="app-texty-form-verify-go2">
-   Wrong phone number? <%= button_to "Correct", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
+<div class="container" id="app-texty-form-verify-go2">
+   Wrong # or did not get code? <%= button_to "Click Here", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
 </div>
 
-<div class="container", "fade" id="app-texty-form-verify-go3">
-   Did not get code? <%= button_to "Resend Sms", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
-</div>
+
 </div>

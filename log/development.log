@@ -38920,3 +38920,582 @@ Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a4
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-11 17:00:39 -0700
+
+
+Started GET "/" for ::1 at 2016-05-13 14:12:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (12.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  [1m[35m (5.7ms)[0m  BEGIN
+  [1m[36mSQL (33.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-13 21:12:13.399813"], ["updated_at", "2016-05-13 21:12:13.399813"]]
+  [1m[35m (6.6ms)[0m  COMMIT
+Completed 500 Internal Server Error in 803ms (ActiveRecord: 85.1ms)
+
+RestClient::ResourceNotFound (404 Resource Not Found):
+  app/controllers/apps/texty_controller.rb:38:in `index'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (625.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (732.2ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:12:15 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.9ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 3269ms (Views: 3248.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/overwriteboostrap.self-4e9b7e0b7d2f26700fa5ca2c548d9b668907801e6ae17cb602ebe6b79e2d4985.css?body=1" for ::1 at 2016-05-13 14:12:18 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:13:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 872ms (Views: 790.8ms | ActiveRecord: 7.1ms)
+
+
+
+
+Started GET "/assets/overwriteboostrap.self-4e9b7e0b7d2f26700fa5ca2c548d9b668907801e6ae17cb602ebe6b79e2d4985.css?body=1" for ::1 at 2016-05-13 14:13:09 -0700
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:13:09 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:13:09 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:13:09 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:13:09 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:13:09 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:13:58 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:13:58 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-4e9b7e0b7d2f26700fa5ca2c548d9b668907801e6ae17cb602ebe6b79e2d4985.css?body=1" for ::1 at 2016-05-13 14:13:58 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:13:58 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:13:58 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:13:58 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:13:59 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:16:43 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.9ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 5390ms (Views: 5373.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/overwriteboostrap.self-dee32ddf1882a9944f447197fbd0db3da76cd7f4b990cfb63b5a471de57be9c8.css?body=1" for ::1 at 2016-05-13 14:16:48 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:16:48 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:16:49 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:16:49 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:16:49 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:16:49 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:18:07 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.7ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 1338ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""):
+     5:    <%= include_gon %>
+     6: 
+     7:   <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+     8:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     9:   <%= javascript_include_tag  'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js' %>
+    10: 
+    11: 
+  app/assets/stylesheets/overwriteboostrap.css.scss:107
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1685458102818295898_70125349727560'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (182.4ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:18:23 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4129ms (Views: 4125.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-ce7e51e9e04104d6a522a381b0d3b987f15f87af7aecd2fcbda37780110e9006.css?body=1" for ::1 at 2016-05-13 14:18:27 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:18:27 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:18:27 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:18:27 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:18:27 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:18:27 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:18:36 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3875ms (Views: 3872.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-bd1fd46c9e28886b3754b47b2fd0988ff5ec4251833791f2895643dd20b6b763.css?body=1" for ::1 at 2016-05-13 14:18:40 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:18:40 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:18:40 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:18:40 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:18:40 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:18:40 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:21:13 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 4818ms (Views: 4785.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/overwriteboostrap.self-39c505005a122283a1f757d0f7f9310548d2a833d223819c038ef7bf288f955c.css?body=1" for ::1 at 2016-05-13 14:21:18 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:21:18 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:21:18 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:21:18 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:21:18 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:21:18 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:23:34 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4527ms (Views: 4523.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-c88ff56c63112f261f052b261b8243b2c04acadefb995373572ee333ef9e6a01.css?body=1" for ::1 at 2016-05-13 14:23:39 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:23:39 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:23:39 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:23:39 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:23:39 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:23:39 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:28:35 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (51.9ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 5119ms (Views: 4995.3ms | ActiveRecord: 52.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-9ce77303c7336480f16e3549d2a535f6ab246ceae833d4e64aef6272a49776df.css?body=1" for ::1 at 2016-05-13 14:28:41 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:28:41 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:28:41 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:28:41 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:28:41 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:28:41 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:29:52 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (1.1ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 4891ms (Views: 4864.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-f907f1c88e37ef330e5f6e337eadf3ca4c08cbb52bb8bfd706024bfd578b043d.css?body=1" for ::1 at 2016-05-13 14:29:57 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:29:57 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:29:57 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:29:57 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:29:57 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:29:57 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:33:28 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (4.7ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 240ms (Views: 212.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/overwriteboostrap.self-f907f1c88e37ef330e5f6e337eadf3ca4c08cbb52bb8bfd706024bfd578b043d.css?body=1" for ::1 at 2016-05-13 14:33:29 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:33:29 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:33:29 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:33:29 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:33:29 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:33:29 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:35:12 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.9ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 5469ms (Views: 5441.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-15da5ecc96b2af3178abab01197e4f0e5d89e679044ce7f53ae977c0fc9f7305.css?body=1" for ::1 at 2016-05-13 14:35:17 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:35:17 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:35:17 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:35:17 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:35:17 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:35:17 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:35:32 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (1.7ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 109ms (Views: 84.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/overwriteboostrap.self-15da5ecc96b2af3178abab01197e4f0e5d89e679044ce7f53ae977c0fc9f7305.css?body=1" for ::1 at 2016-05-13 14:35:32 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:35:32 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:35:32 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:35:32 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:35:32 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:35:32 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:36:26 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4995ms (Views: 4991.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-cb7c0dd5e35a43851a2c45a1bc5e34396f92d8c933dd56fd52e5756a6dd9233e.css?body=1" for ::1 at 2016-05-13 14:36:31 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:36:31 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:36:31 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:36:31 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:36:31 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:36:31 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:36:57 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 4852ms (Views: 4830.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-ad86742f5e6546bd22dc804b84f33d53d747e3498562aa74aae611ed3f59baba.css?body=1" for ::1 at 2016-05-13 14:37:02 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:37:02 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:37:02 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:37:02 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:37:02 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:37:02 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:37:41 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 87ms (Views: 81.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-ad86742f5e6546bd22dc804b84f33d53d747e3498562aa74aae611ed3f59baba.css?body=1" for ::1 at 2016-05-13 14:37:41 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:37:41 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:37:41 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:37:41 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:37:41 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:37:41 -0700
+
+
+Started GET "/apps/texty/forgot" for ::1 at 2016-05-13 14:37:46 -0700
+Processing by Apps::TextyController#forgot as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36m (8.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered apps/texty/forgot.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 53ms (Views: 35.8ms | ActiveRecord: 9.3ms)
+
+
+Started PATCH "/apps/texty/update_phone" for ::1 at 2016-05-13 14:38:03 -0700
+Processing by Apps::TextyController#update_phone as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLXmckg8K+a63gHrzbN2pRcR9r3gesOifySyvQ2enbh3xN0Agr/53nWPxW7WYUPnO8r9sUpWXGe6JvhYnnNIng==", "phone"=>{"number"=>"3123913609"}, "commit"=>"Send"}
+  [1m[36mPhone Load (0.7ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (42.4ms)[0m  [1mUPDATE "phones" SET "number" = $1, "updated_at" = $2 WHERE "phones"."id" = $3[0m  [["number", "3123913609"], ["updated_at", "2016-05-13 21:38:03.470636"], ["id", 2]]
+  [1m[35m (13.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mPhone Load (11.5ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 1844ms (ActiveRecord: 77.6ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:38:05 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.6ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/apps/texty/forgot" for ::1 at 2016-05-13 14:38:21 -0700
+Processing by Apps::TextyController#forgot as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered apps/texty/forgot.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/apps/texty/forgot" for ::1 at 2016-05-13 14:38:37 -0700
+Processing by Apps::TextyController#forgot as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  Rendered apps/texty/forgot.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-ad86742f5e6546bd22dc804b84f33d53d747e3498562aa74aae611ed3f59baba.css?body=1" for ::1 at 2016-05-13 14:38:37 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:38:37 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:38:37 -0700
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:38:37 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:38:37 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:38:37 -0700
+
+
+Started PATCH "/apps/texty/update_phone" for ::1 at 2016-05-13 14:38:42 -0700
+Processing by Apps::TextyController#update_phone as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"11DJnJiOQJZVv5rc7F5LUs+5k2dOofm+qOMeK7ExnSi8IfLuUg2SrpruXln3jH4Q42KYa+SNZntt4VTOItxIDg==", "phone"=>{"number"=>"3123913609"}, "commit"=>"Send"}
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones"  ORDER BY "phones"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/apps/texty/verify
+Completed 302 Found in 1561ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:38:44 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-13 14:39:43 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.6ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 75ms (Views: 67.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/theme.self-acd5d39a4e42071df0291e80b1ed73676b6831e59991d1be1747889562e47d37.css?body=1" for ::1 at 2016-05-13 14:39:44 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:39:44 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-13 14:39:44 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-13 14:39:44 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-ad86742f5e6546bd22dc804b84f33d53d747e3498562aa74aae611ed3f59baba.css?body=1" for ::1 at 2016-05-13 14:39:44 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-13 14:39:44 -0700
