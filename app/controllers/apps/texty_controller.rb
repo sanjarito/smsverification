@@ -88,9 +88,7 @@ def update_phone
           redirect_to '/apps/texty/verify'
 
 
-        else
-          render 'new'
-        end
+
 
 
 end
