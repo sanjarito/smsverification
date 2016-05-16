@@ -135,6 +135,7 @@ end
 
  @phone = Phone.find_by_user_id(session[:user])
     @user = User.find_by_id(session[:user])
+    @phone.update(:vercode => @phone.vercode)
 
 
   end
