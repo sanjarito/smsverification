@@ -14,7 +14,7 @@ module Messenger
     # @client = Twilio::REST::TaskRouterClient.new acct_sid, auth_token, workspace_sid
 
 
-    @phone = Phone.last
+    @phone = Phone.find_by_user_id(session[:user])
 
 
     from = '+18446946384'
