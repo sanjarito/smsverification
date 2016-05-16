@@ -1,15 +1,16 @@
 <div class="jumbotron text-center">
   <div class="container">
- <h1 style="color:yellow"><</h1><h1> Enter your phone number and we will send verfication code again </h1><h1 style="color:yellow">/></h1>
+ <h1><span class="yellow-word" style="color:#fdb814"><</span> Enter your phone number and we will send verfication code again <span style="color:#fdb814">/></span></h1>
 
 
   </div>
   </div>
 <br><br><br><br>
+<div class="container">
   <div class="container fade" id="app-texty-form-verify-go4">
 
     <%= form_for @phone, url: '/apps/texty/update_phone'  do |f| %>
-    <%= f.label :number, 'Enter your phone number' %>
+    <%= f.label :number, 'Phone #' %>
     <%= f.text_field :number, class: 'form-control', placeholder: '############' %>
 
 
@@ -19,3 +20,9 @@
     <%= f.submit '< Send />', class: 'btn btn-primary'%>
     <% end %>
   </div>
+
+
+  <div class="container" id="app-texty-form-verify-go2">
+     Already have code #? <%= button_to " < Click Here />", '/apps/texty/verify' , :method => :get, class: 'btn btn-primary here' %>
+  </div>
+</div>
