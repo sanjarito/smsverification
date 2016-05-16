@@ -73,6 +73,7 @@ class Apps::TextyController < ApplicationController
   # end
 
 def update_phone
+  session[:user] = params[:user_id]
     @phone = Phone.find_by_user_id(session[:user])
     @user = User.find_by_id(session[:user])
     @phone.vercode = rand(10000..100000).to_s
