@@ -99,7 +99,6 @@ end
     @phone = Phone.find_by_user_id(session[:user])
     @user = User.find_by_id(session[:user])
     @phone = Phone.create(phone_params)
-    @phone.vercode = rand(10000..100000).to_s
     @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
 
@@ -133,7 +132,7 @@ end
 
  @phone = Phone.find_by_user_id(session[:user])
     @user = User.find_by_id(session[:user])
-  
+
 
 
   end
