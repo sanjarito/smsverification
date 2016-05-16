@@ -145,6 +145,7 @@ end
       if @phone.vercode === params[:phone][:vercode]
         user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
         result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
+        result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"telephone":"#{@phone.number}"}}})
         redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"
       else
         flash[:alert]="Ver code is invalid"
