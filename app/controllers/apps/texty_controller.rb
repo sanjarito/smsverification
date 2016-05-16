@@ -75,11 +75,14 @@ class Apps::TextyController < ApplicationController
 def update_phone
     @phone = Phone.find_by_user_id(session[:user])
     @user = User.find_by_id(session[:user])
+    @phone.vercode = rand(10000..100000).to_s
     @phone.update(:number => params[:phone][:number])
-    @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
+    @phone.send_sms(@phone.number,@phone.vercode)
 
-        if @phone.save && defined?(@phone.number)
+
+  
+
 
 
           redirect_to '/apps/texty/verify'
