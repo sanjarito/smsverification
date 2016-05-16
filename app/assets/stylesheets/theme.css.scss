@@ -1,6 +1,10 @@
 $brand-primary: #532F8C;
 $brand-language: #B01302;
 
+.navbar-nav {
+  margin: 0;
+}
+
 .font-face{
     font-family: 'Fira Sans';
     src: url("eot/FiraSans-Light.eot");
@@ -37,7 +41,11 @@ $brand-language: #B01302;
   .navbar + & {
     margin-top: -50px;
     margin-bottom: 10px;
+
   }
+
+
+
 
   .lang-logo {
     display: block;

@@ -40663,3 +40663,1374 @@ Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb8
 
 
 Started GET "/assets/overwriteboostrap.self-bd7b6ba92480e18824c32792c2c0f609cb215a7198dc88e891b3c76b58e3442a.css?body=1" for ::1 at 2016-05-16 00:58:03 -0700
+
+
+Started GET "/" for ::1 at 2016-05-16 09:02:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (6.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#index as HTML
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (27.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-16 16:02:56.614056"], ["updated_at", "2016-05-16 16:02:56.614056"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+Completed 500 Internal Server Error in 846ms (ActiveRecord: 64.3ms)
+
+RestClient::ResourceNotFound (404 Resource Not Found):
+  app/controllers/apps/texty_controller.rb:38:in `index'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (566.0ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (669.8ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:03:01 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.8ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 1201ms (Views: 1182.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:03:02 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:05:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 6073ms (Views: 6008.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-5ddeeec97a407acbac3f2fcc92eacb35fe2b0baeab76c6e287ee4a1c6945f455.css?body=1" for ::1 at 2016-05-16 09:05:09 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:05:09 -0700
+
+
+Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb80a28220c2f7cbcc6.css?body=1" for ::1 at 2016-05-16 09:05:09 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:05:09 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:05:09 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:05:09 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:07:02 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5127ms (Views: 5123.8ms | ActiveRecord: 0.6ms)
+
+
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:07:07 -0700
+Started GET "/assets/overwriteboostrap.self-a3f1f901d5d0e6e38c92a6be53f6868adaa888d8407ed65a350364d28b9b171d.css?body=1" for ::1 at 2016-05-16 09:07:07 -0700
+
+
+Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb80a28220c2f7cbcc6.css?body=1" for ::1 at 2016-05-16 09:07:07 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:07:07 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:07:07 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:07:07 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:07:57 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.7ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 3986ms (Views: 3981.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/overwriteboostrap.self-22727a51afa53bdabda108f835d597ccaa58d231c2d4beb487dd85ec7a0d4ef0.css?body=1" for ::1 at 2016-05-16 09:08:01 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:08:01 -0700
+
+
+Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb80a28220c2f7cbcc6.css?body=1" for ::1 at 2016-05-16 09:08:01 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:08:01 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:08:01 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:08:01 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:08:27 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3462ms (Views: 3458.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-90a0cb1f8877675b5593b69b10d8797799013ffac17ff9c52faeb3993f2b7def.css?body=1" for ::1 at 2016-05-16 09:08:30 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:08:30 -0700
+
+
+Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb80a28220c2f7cbcc6.css?body=1" for ::1 at 2016-05-16 09:08:30 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:08:30 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:08:30 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:08:30 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:08:44 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3318ms (Views: 3314.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7508d44662306e8f8dbff3a28e20b6c869cadd40fd3f783d49a69b6593f7d294.css?body=1" for ::1 at 2016-05-16 09:08:47 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:08:47 -0700
+
+
+Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb80a28220c2f7cbcc6.css?body=1" for ::1 at 2016-05-16 09:08:47 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:08:47 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:08:47 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:08:47 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:08:56 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.6ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3928ms (Views: 3923.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-6b78d78ce6879ba80005a0f6df31f60520c1cb15385d12ba905ef647b4076292.css?body=1" for ::1 at 2016-05-16 09:09:00 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:09:00 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:09:00 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:09:00 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:09:00 -0700
+
+
+Started GET "/assets/theme.self-f8574f2d45606ad26feaf19bf9ddc84a7792326857863eb80a28220c2f7cbcc6.css?body=1" for ::1 at 2016-05-16 09:09:00 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:10:43 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.7ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1949ms (Views: 1944.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/theme.self-dacdc68fd1c5494c0832934b71b4e197ea31fab78dca63747c209e2d47c1df1d.css?body=1" for ::1 at 2016-05-16 09:10:45 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-6b78d78ce6879ba80005a0f6df31f60520c1cb15385d12ba905ef647b4076292.css?body=1" for ::1 at 2016-05-16 09:10:45 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:10:45 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:10:45 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:10:45 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:10:45 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:11:04 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.5ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1799ms (Views: 1795.6ms | ActiveRecord: 0.8ms)
+
+
+
+
+Started GET "/assets/theme.self-9b8cb41996632e51f4f85bd9a8b7ab36ad5cbd52084b74f74944d9bf60ca84d3.css?body=1" for ::1 at 2016-05-16 09:11:06 -0700
+Started GET "/assets/overwriteboostrap.self-6b78d78ce6879ba80005a0f6df31f60520c1cb15385d12ba905ef647b4076292.css?body=1" for ::1 at 2016-05-16 09:11:06 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:11:06 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:11:06 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:11:06 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:11:06 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:13:57 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.7ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 1286ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (Base-level rules cannot contain the parent-selector-referencing character '&'.):
+     5:    <%= include_gon %>
+     6: 
+     7:   <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+     8:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     9:   <%= javascript_include_tag  'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js' %>
+    10: 
+    11: 
+  app/assets/stylesheets/theme.css.scss:37
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1850076696976190303_70248398247840'
+
+
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (599.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/santiagocasar/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (829.5ms)
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:14:49 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1743ms (Views: 1736.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/overwriteboostrap.self-6b78d78ce6879ba80005a0f6df31f60520c1cb15385d12ba905ef647b4076292.css?body=1" for ::1 at 2016-05-16 09:14:50 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:14:50 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:14:51 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:14:51 -0700
+
+
+Started GET "/assets/theme.self-9b8cb41996632e51f4f85bd9a8b7ab36ad5cbd52084b74f74944d9bf60ca84d3.css?body=1" for ::1 at 2016-05-16 09:14:51 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:14:51 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:15:13 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.8ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1370ms (Views: 1366.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/theme.self-78f229cf426b11c7cf67054f9c0ddc6e35d8b93af3301c4ee877ff865b31a89b.css?body=1" for ::1 at 2016-05-16 09:15:15 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-6b78d78ce6879ba80005a0f6df31f60520c1cb15385d12ba905ef647b4076292.css?body=1" for ::1 at 2016-05-16 09:15:15 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:15:15 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:15:15 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:15:15 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:15:15 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:15:21 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/overwriteboostrap.self-6b78d78ce6879ba80005a0f6df31f60520c1cb15385d12ba905ef647b4076292.css?body=1" for ::1 at 2016-05-16 09:15:21 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:15:21 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:15:21 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:15:21 -0700
+
+
+Started GET "/assets/theme.self-78f229cf426b11c7cf67054f9c0ddc6e35d8b93af3301c4ee877ff865b31a89b.css?body=1" for ::1 at 2016-05-16 09:15:21 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:15:21 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:15:58 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4680ms (Views: 4676.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-87163879d722a0457b5dd3f9cd313740b749fda24be0acd955cf16006fbb2b3f.css?body=1" for ::1 at 2016-05-16 09:16:03 -0700
+
+
+Started GET "/assets/theme.self-2e1e076e2c3da3e81a8096fbc048c83e23040b90fefcacba5bd3d2fe3162cdaf.css?body=1" for ::1 at 2016-05-16 09:16:03 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:16:03 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:16:03 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:16:03 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:16:03 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:16:52 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4558ms (Views: 4554.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-77ca0eac8628eeff93976b27603b8f65d40d68e62c69c0c8ca5eafe4876420d7.css?body=1" for ::1 at 2016-05-16 09:16:57 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:16:57 -0700
+
+
+Started GET "/assets/theme.self-2e1e076e2c3da3e81a8096fbc048c83e23040b90fefcacba5bd3d2fe3162cdaf.css?body=1" for ::1 at 2016-05-16 09:16:57 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:16:57 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:16:57 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:16:57 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:22:10 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (36.8ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 5358ms (Views: 5266.3ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-93fe2b9cdffc375841b25e7e8efe64587f35b18343e7480cbde71ec205ad8624.css?body=1" for ::1 at 2016-05-16 09:22:16 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:22:16 -0700
+
+
+Started GET "/assets/theme.self-2e1e076e2c3da3e81a8096fbc048c83e23040b90fefcacba5bd3d2fe3162cdaf.css?body=1" for ::1 at 2016-05-16 09:22:16 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:22:16 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:22:16 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:22:16 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:26:52 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (1.0ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 5178ms (Views: 5153.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:26:57 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:26:57 -0700
+
+
+Started GET "/assets/theme.self-2e1e076e2c3da3e81a8096fbc048c83e23040b90fefcacba5bd3d2fe3162cdaf.css?body=1" for ::1 at 2016-05-16 09:26:57 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-2335262a7945d10fca1976bb3f1009fa90b2c7226ce30a83efd589221d4b41d6.css?body=1" for ::1 at 2016-05-16 09:26:57 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:26:57 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:26:57 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:27:18 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (1.2ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 4734ms (Views: 4714.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:27:23 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:27:23 -0700
+
+
+Started GET "/assets/theme.self-2e1e076e2c3da3e81a8096fbc048c83e23040b90fefcacba5bd3d2fe3162cdaf.css?body=1" for ::1 at 2016-05-16 09:27:23 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:27:23 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:27:23 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:27:23 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:27:35 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1675ms (Views: 1670.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/theme.self-55eabb692e6b04d38fa1072d13c68799ff46623dec5c37115b2246c58f0780e3.css?body=1" for ::1 at 2016-05-16 09:27:36 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:27:36 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:27:36 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:27:36 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:27:36 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:27:36 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:27:47 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1462ms (Views: 1459.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/theme.self-400ebf1bfc3a18e9acb05224b98bd5437a94189b36ee313eb309806916601cfb.css?body=1" for ::1 at 2016-05-16 09:27:48 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:27:48 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:27:48 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:27:48 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:27:48 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:27:48 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:29:42 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.9ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 2159ms (Views: 2135.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:29:45 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:29:45 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:29:45 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:29:45 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:29:45 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:29:45 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:30:08 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:30:08 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:30:08 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:30:08 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:30:08 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:30:08 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:30:08 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:30:47 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.7ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 1.2ms)
+
+
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:30:47 -0700
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:30:47 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:30:47 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:30:47 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:30:47 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:30:47 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:30:54 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:30:54 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:30:54 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:30:54 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:30:54 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:30:54 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:30:54 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:32:56 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:32:56 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:32:56 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:32:56 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:32:56 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:32:56 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:32:56 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:33:31 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:33:31 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:33:31 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:33:31 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:33:31 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:33:31 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:33:31 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:34:04 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:34:04 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:34:04 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:34:04 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:34:04 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:34:04 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:34:04 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:34:45 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.5ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 95ms (Views: 78.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:34:45 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:34:45 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:34:45 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:34:45 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:34:45 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:34:45 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:35:03 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:35:03 -0700
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:35:03 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:35:03 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:35:03 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:35:03 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:35:03 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:36:29 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:36:29 -0700
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:36:29 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:36:29 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:36:29 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:36:29 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:36:29 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:37:56 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.5ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 77ms (Views: 70.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:37:56 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:37:56 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:37:56 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:37:57 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:37:57 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:37:57 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:38:23 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.9ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 68ms (Views: 46.6ms | ActiveRecord: 1.5ms)
+
+
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:38:23 -0700
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:38:23 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:38:23 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:38:24 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:38:24 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:38:24 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:38:40 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:38:40 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:38:40 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:38:40 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:38:40 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:38:40 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:38:40 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:39:10 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.6ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:39:10 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:39:10 -0700
+
+
+Started GET "/assets/theme.self-5984f2ee730fcdbd327c144665e88d9ed46b682baa9603dfe3b721c3819f5972.css?body=1" for ::1 at 2016-05-16 09:39:10 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:39:10 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:39:10 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:39:10 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:40:25 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (1.2ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2063ms (Views: 2053.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/theme.self-de32f282f8c64f1bb06640ad30c84e5c9b03ff293a8f8082028e776e0d054ed5.css?body=1" for ::1 at 2016-05-16 09:40:27 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:40:27 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:40:27 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:40:27 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:40:27 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:40:27 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:40:58 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:40:58 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:40:58 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:40:58 -0700
+
+
+Started GET "/assets/theme.self-de32f282f8c64f1bb06640ad30c84e5c9b03ff293a8f8082028e776e0d054ed5.css?body=1" for ::1 at 2016-05-16 09:40:58 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:40:58 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:40:58 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:41:18 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.3ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2169ms (Views: 2166.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/theme.self-63419691ac649e6d31dd484cd7886117c13919cae7ed370d09fb90fb141b37a6.css?body=1" for ::1 at 2016-05-16 09:41:20 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:41:20 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:41:20 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:41:20 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:41:20 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:41:20 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:41:34 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 2077ms (Views: 2059.3ms | ActiveRecord: 1.2ms)
+
+
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:41:36 -0700
+Started GET "/assets/theme.self-3aa517297d6c4fb065e87430bb33f5ff3451463ba0d6999ea550d134e4cd08f5.css?body=1" for ::1 at 2016-05-16 09:41:36 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:41:36 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:41:36 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:41:36 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:41:36 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:42:09 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2124ms (Views: 2120.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:42:11 -0700
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:42:11 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:42:11 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:42:11 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:42:11 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:42:11 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:43:09 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.8ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 262ms (Views: 256.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:43:09 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:43:09 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:43:09 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:43:09 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:43:09 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:43:09 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:43:43 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 75ms (Views: 69.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:43:44 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:43:44 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:43:44 -0700
+
+
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:43:44 -0700
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:43:44 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:43:44 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:43:57 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:43:57 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:43:57 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:43:57 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:43:57 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:43:57 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:43:57 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:44:00 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:44:00 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:44:00 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:44:00 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:44:00 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:44:00 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:44:00 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:46:00 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 55.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:46:00 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:00 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:46:00 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:46:00 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:00 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:46:00 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:46:07 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.7ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 96ms (Views: 78.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:46:08 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:08 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:46:08 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:08 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:46:08 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:46:08 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:46:40 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:46:40 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:40 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:46:40 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:40 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:46:40 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:46:40 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:46:55 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:46:55 -0700
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:46:55 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:55 -0700
+
+
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:46:55 -0700
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:46:55 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:46:55 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:47:07 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.5ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:47:07 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:47:07 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:47:07 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:47:07 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:47:07 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:47:07 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:47:27 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:47:27 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:47:27 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:47:27 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:47:27 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:47:27 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:47:27 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:47:44 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.4ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:47:45 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:47:45 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:47:45 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:47:45 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:47:45 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:47:45 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:48:19 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[36mPhone Load (0.4ms)[0m  [1mSELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered apps/texty/verify.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:48:20 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:48:20 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:48:20 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:48:20 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:48:20 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:48:20 -0700
+
+
+Started GET "/apps/texty/verify" for ::1 at 2016-05-16 09:48:25 -0700
+Processing by Apps::TextyController#verify as HTML
+  [1m[35mPhone Load (0.3ms)[0m  SELECT  "phones".* FROM "phones" WHERE "phones"."user_id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered apps/texty/verify.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/overwriteboostrap.self-7a15781cb253378a90774202a4721125bc54be50c3808183bb52c9c01d052176.css?body=1" for ::1 at 2016-05-16 09:48:25 -0700
+
+
+Started GET "/assets/application.self-b78f03d213f484be2314e769f2785d9bdda83ba1a457b55ec8ed56ad964f4518.css?body=1" for ::1 at 2016-05-16 09:48:25 -0700
+
+
+Started GET "/assets/theme.self-f7bdda5d14e6f63dac58cec283eb3c70b222a9a4cbecda9ca246c4567d377c5a.css?body=1" for ::1 at 2016-05-16 09:48:25 -0700
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:48:25 -0700
+
+
+Started GET "/assets/pixfizzlogo.png" for ::1 at 2016-05-16 09:48:25 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 09:48:25 -0700

@@ -10,7 +10,7 @@ body {
   margin-top: -50px;
   margin-bottom: 0px;
   font-family: 'Fira Mono';
-  background-color: #27262c;
+  background-color: #3a3846;
 }
 
 .label {
@@ -48,7 +48,8 @@ display: block;
   text-align: center;
   display: block;
      margin-left: auto;
-     margin-right: auto
+     margin-right: auto;
+         margin-left: -15px;
 
 
 }
@@ -107,6 +108,14 @@ margin-top: -20px;
     margin-top: -59px;
     padding-bottom: 10px;
   }
-  // .navbar-inverse{
-  //   background: none;
-  // }
+  .btn.btn-primary.here{
+    margin-top: 10px;
+  }
+
+  .navbar-inverse {
+    background: #3d4255;
+  }
+
+  .logo a {
+    background-color: white;
+  }
