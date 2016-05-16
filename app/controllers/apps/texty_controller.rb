@@ -77,7 +77,7 @@ def update_phone
     @user = User.find_by_id(session[:user])
     @phone.vercode = rand(10000..100000).to_s
     @phone.update(:number => params[:phone][:number])
-    Phone.update(:vercode => @phone.vercode)
+    @phone.update(:vercode => 'as123123')
     @phone.save
     @phone.send_sms(@phone.number,@phone.vercode)
 
