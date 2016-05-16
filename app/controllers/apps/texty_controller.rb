@@ -81,7 +81,7 @@ def update_phone
     @phone.send_sms(@phone.number,@phone.vercode)
 
 
-  
+
 
 
 
@@ -100,7 +100,6 @@ end
   def send_text
     @phone = Phone.find_by_user_id(session[:user])
     @user = User.find_by_id(session[:user])
-    @phone = Phone.create(phone_params)
     @phone.send_sms(@phone.number,@phone.vercode)
     @phone.save
 
