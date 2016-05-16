@@ -1,6 +1,6 @@
 <div class="jumbotron text-center">
-  
- <h1> Thanks! Your code has been sent to <%= @phone.number %>  </h1>
+
+ <h1> < Thanks! Your code has been sent to <%= @phone.number %> /> </h1>
 
 
 
@@ -16,7 +16,7 @@
 
 
   <br>
-  <%= f.submit 'Verify', class: 'btn btn-primary'%>
+  <%= f.submit '< Verify />', class: 'btn btn-primary'%>
   <% end %>
 </div>
 
@@ -24,7 +24,7 @@
 
 
 <div class="container" id="app-texty-form-verify-go2">
-   Wrong # or did not get code? <%= button_to "Click Here", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
+   Wrong # or did not get code? <%= button_to " < Click Here />", '/apps/texty/forgot' , :method => :get, class: 'btn btn-primary'%>
 </div>
 
 

@@ -7,7 +7,7 @@ body {
 }
 
 .jumbotron {
-
+  margin-top: -50px;
   margin-bottom: 0px;
   font-family: 'Fira Mono';
   background-color: #27262c;
@@ -98,4 +98,15 @@ margin-top: -20px;
 
 .jumbotron h1 {
   font-size: 14px;
+      padding-bottom: 20px;
 }
+
+.jumbotron.text-center {
+    font-family: 'Fira Mono';
+    color: white;
+    margin-top: -59px;
+    padding-bottom: 10px;
+  }
+  // .navbar-inverse{
+  //   background: none;
+  // }

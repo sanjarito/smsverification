@@ -14,6 +14,8 @@ $brand-language: #B01302;
 
 
 .jumbotron.text-center {
+  display: block;
+  margin-top: -50px;
   font-family: 'Fira Mono';
   color: white;
   padding-bottom: 0px;
@@ -33,7 +35,8 @@ $brand-language: #B01302;
   }
 
   .navbar + & {
-    margin-top: -20px;
+    margin-top: -50px;
+    margin-bottom: 10px;
   }
 
   .lang-logo {
