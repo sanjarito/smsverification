@@ -75,6 +75,7 @@ class Apps::TextyController < ApplicationController
 def update_phone
     @phone = Phone.find_by_user_id(session[:user])
     @phone.update(:number => params[:phone][:number])
+    @phone.vercode = rand(10000..100000).to_s
     @phone.save
     @phone.send_sms(@phone.number,@phone.vercode)
 
