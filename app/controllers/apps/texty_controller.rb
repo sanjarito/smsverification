@@ -25,7 +25,7 @@ class Apps::TextyController < ApplicationController
             if @phone.user_id.length >= 2
 
 
-              redirect_to "/apps/texty/forgot"
+              redirect_to "/apps/texty/verify"
             else
               @phone = Phone.new
               @user = User.new
