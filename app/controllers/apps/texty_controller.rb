@@ -22,11 +22,11 @@ class Apps::TextyController < ApplicationController
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
             session[:user] = params[:user_id]
             @phone = Phone.find_by_user_id(session[:user])
-            if @phone.exists?
+            if (defined?(@phone))
 
 
               redirect_to "/apps/texty/verify"
-            elsif
+            else
               @phone = Phone.new
               @user = User.new
             @user.id = params[:user_id]
@@ -44,10 +44,7 @@ class Apps::TextyController < ApplicationController
 
             redirect_to "/apps/texty/verify"
             end
-          else
-            redirect_to "https://instantsignup.pixfizz.com/site"
 
-            end
 
   end
 
