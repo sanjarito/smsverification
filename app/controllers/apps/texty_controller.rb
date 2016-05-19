@@ -25,7 +25,7 @@ class Apps::TextyController < ApplicationController
             if (defined?(@phone))
 
 
-              redirect_to "/apps/texty/verify"
+              redirect_to "/apps/texty/forgot"
             else
               @phone = Phone.new
               @user = User.new
