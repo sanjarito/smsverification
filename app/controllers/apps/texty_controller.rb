@@ -116,7 +116,7 @@ end
 
   def forgot
 
-    session[:user] = params[:user_id]
+    
 
 
     @phone = Phone.find_by_user_id(session[:user])
