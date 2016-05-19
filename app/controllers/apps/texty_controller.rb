@@ -22,7 +22,7 @@ class Apps::TextyController < ApplicationController
     # @users = JSON.parse(users, :symbolize_names => true) # we will convert the return
             session[:user] = params[:user_id]
             @phone = Phone.find_by_user_id(session[:user])
-            if (defined?(@phone))
+            if @phone.user_id.length >= 2
 
 
               redirect_to "/apps/texty/forgot"
