@@ -38,17 +38,14 @@ class Apps::TextyController < ApplicationController
 
             @phone.number = @user[:custom][:telephone]
 
-            if !Phone.exists?(@phone.vercode)
+            
             @phone.vercode = rand(10000..100000).to_s
             @phone.save
             @phone.send_sms(@phone.number,@phone.vercode)
 
             redirect_to "/apps/texty/verify"
 
-            else
-            redirect_to "https://instantsignup.pixfizz.com/site"
 
-            end
 
   end
 
