@@ -50,7 +50,7 @@ class Apps::TextyController < ApplicationController
             redirect_to "/apps/texty/verify"
 
             else
-            redirect_to "https://instantsignup.pixfizz.com/site"
+          
 
             end
 
