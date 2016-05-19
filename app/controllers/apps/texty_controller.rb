@@ -116,7 +116,7 @@ end
 
   def forgot
 
-    
+
 
 
     @phone = Phone.find_by_user_id(session[:user])
@@ -146,12 +146,13 @@ end
         user_api = RestClient::Resource.new('https://instantsignup.pixfizz.com', :user => USERNAME , :password => PASSWORD)
         result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"vercode":"#{@phone.vercode}"}}})
         result = user_api["/v1/users/#{@user.id}.json"].put({:user =>{"custom" => {"telephone":"#{@phone.number}"}}})
-        redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"
+        r
       else
         flash[:alert]="Ver code is invalid"
       flash[:color]="invalid"
       redirect_to :action => 'verify'
       end
+      redirect_to "http://instantsignup.pixfizz.com/site/nextsteps"
   end
 
   def authcallback
