@@ -7,7 +7,7 @@ class Apps::TextyController < ApplicationController
   require 'open-uri'
 
   USERNAME = "Api@hotmail.com" # needed to access the APi
-  PASSWORD = "Api2000" # needed to access the APi
+  PASSWORD = "Password" # needed to access the APi
   API_BASE_URL = "https://instantsignup.pixfizz.com/v1/admin/users" # base url of the API
   API_BASE_URL2 = "https://instantsignup.pixfizz.com/v1/users/" # base url of the API
 
